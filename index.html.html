@@ -1,943 +1,1271 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KCSE Agriculture Project Portfolio — 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --green-deep: #1a3a1a;
-    --green-mid: #2d6a2d;
-    --green-light: #4caf50;
-    --green-pale: #e8f5e9;
-    --gold: #c8a84b;
-    --gold-light: #f5e6b8;
-    --cream: #fdfaf4;
-    --charcoal: #1c1c1c;
-    --muted: #6b7280;
-    --border: #d4e6d4;
-    --red: #c0392b;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KCSE Agriculture Project Portfolio — 2026</title>
+  <title>KCSE Powered By Teacher Kibet Solosma Smacqx Technologies Tel +25478309458</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --green-deep: #1a3a1a;
+      --green-mid: #2d6a2d;
+      --green-light: #4caf50;
+      --green-pale: #e8f5e9;
+      --gold: #c8a84b;
+      --gold-light: #f5e6b8;
+      --cream: #fdfaf4;
+      --charcoal: #1c1c1c;
+      --muted: #6b7280;
+      --border: #d4e6d4;
+      --red: #c0392b;
+    }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--charcoal);
-    min-height: 100vh;
-  }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      min-height: 100vh;
+    }
 
-  /* ===== HEADER ===== */
-  .site-header {
-    background: var(--green-deep);
-    color: white;
-    padding: 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-  }
-  .header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 24px;
-  }
-  .header-logo {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-  .knec-badge {
-    width: 48px; height: 48px;
-    background: var(--gold);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 14px; font-weight: 700;
-    color: var(--green-deep);
-    flex-shrink: 0;
-  }
-  .header-title { font-family: 'Playfair Display', serif; font-size: 15px; line-height: 1.2; }
-  .header-title small { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 300; opacity: 0.7; display: block; }
-  .header-nav { display: flex; gap: 6px; }
-  .nav-pill {
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-    cursor: pointer;
-    border: 1px solid rgba(255,255,255,0.2);
-    color: rgba(255,255,255,0.8);
-    background: transparent;
-    transition: all 0.2s;
-    text-decoration: none;
-  }
-  .nav-pill:hover, .nav-pill.active {
-    background: var(--gold);
-    color: var(--green-deep);
-    border-color: var(--gold);
-  }
+    /* ===== HEADER ===== */
+    .site-header {
+      background: var(--green-deep);
+      color: white;
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    }
 
-  /* ===== HERO BANNER ===== */
-  .hero {
-    background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-mid) 60%, #3d8b3d 100%);
-    color: white;
-    padding: 60px 24px 40px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image: radial-gradient(circle at 20% 80%, rgba(200,168,75,0.15) 0%, transparent 50%),
-                      radial-gradient(circle at 80% 20%, rgba(76,175,80,0.2) 0%, transparent 50%);
-  }
-  .hero-content { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
-  .hero-tag {
-    display: inline-block;
-    background: rgba(200,168,75,0.25);
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    padding: 4px 16px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-  }
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(26px, 5vw, 44px);
-    font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 12px;
-  }
-  .hero h1 span { color: var(--gold); }
-  .hero p { font-size: 15px; opacity: 0.75; margin-bottom: 30px; }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+    }
 
-  /* GROUP INFO CARD */
-  .group-card {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 16px;
-    padding: 24px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 16px;
-    text-align: left;
-    backdrop-filter: blur(10px);
-  }
-  .group-field label {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--gold);
-    font-weight: 600;
-    display: block;
-    margin-bottom: 4px;
-  }
-  .group-field input, .group-field select {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 8px;
-    padding: 8px 12px;
-    color: white;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    width: 100%;
-    outline: none;
-  }
-  .group-field input::placeholder { color: rgba(255,255,255,0.4); }
-  .group-field input:focus { border-color: var(--gold); }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-  /* ===== MAIN LAYOUT ===== */
-  .main-wrap {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 32px 24px 60px;
-  }
+    .knec-badge {
+      width: 48px;
+      height: 48px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--green-deep);
+      flex-shrink: 0;
+    }
 
-  /* ===== PROGRESS TRACKER ===== */
-  .progress-section { margin-bottom: 40px; }
-  .section-label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--gold);
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    color: var(--green-deep);
-    margin-bottom: 20px;
-  }
-  .timeline {
-    display: flex;
-    gap: 0;
-    position: relative;
-  }
-  .timeline::before {
-    content: '';
-    position: absolute;
-    top: 22px; left: 22px; right: 22px;
-    height: 2px;
-    background: var(--border);
-    z-index: 0;
-  }
-  .milestone-step {
-    flex: 1;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-  }
-  .step-dot {
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 8px;
-    font-size: 13px;
-    font-weight: 700;
-    transition: all 0.3s;
-    border: 2px solid var(--border);
-    background: white;
-    color: var(--muted);
-  }
-  .step-dot.done { background: var(--green-light); border-color: var(--green-light); color: white; }
-  .step-dot.active { background: var(--green-deep); border-color: var(--green-deep); color: var(--gold); }
-  .step-dot.pending { background: white; border-color: var(--border); color: var(--muted); }
-  .step-label { font-size: 11px; font-weight: 500; color: var(--muted); line-height: 1.3; }
-  .step-date { font-size: 10px; color: var(--gold); margin-top: 2px; }
+    .header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      line-height: 1.2;
+    }
 
-  /* ===== MILESTONE PANELS ===== */
-  .milestones-grid { display: flex; flex-direction: column; gap: 24px; }
+    .header-title small {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      opacity: 0.7;
+      display: block;
+    }
 
-  .milestone-panel {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-    border: 1px solid var(--border);
-    transition: box-shadow 0.3s;
-  }
-  .milestone-panel:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+    .header-nav {
+      display: flex;
+      gap: 6px;
+    }
 
-  .milestone-header {
-    padding: 20px 28px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    user-select: none;
-  }
-  .milestone-header.m1 { background: linear-gradient(90deg, #e8f5e9, #f1f8e9); border-bottom: 1px solid #c8e6c9; }
-  .milestone-header.m2 { background: linear-gradient(90deg, #fff8e1, #fffde7); border-bottom: 1px solid #ffe082; }
+    .nav-pill {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: rgba(255, 255, 255, 0.8);
+      background: transparent;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
 
-  .milestone-badge {
-    display: flex; align-items: center; gap: 14px;
-  }
-  .badge-icon {
-    width: 42px; height: 42px;
-    border-radius: 12px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 20px;
-  }
-  .m1 .badge-icon { background: var(--green-pale); }
-  .m2 .badge-icon { background: var(--gold-light); }
+    .nav-pill:hover,
+    .nav-pill.active {
+      background: var(--gold);
+      color: var(--green-deep);
+      border-color: var(--gold);
+    }
 
-  .milestone-meta h3 { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--green-deep); }
-  .milestone-meta p { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    /* ===== HERO BANNER ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-mid) 60%, #3d8b3d 100%);
+      color: white;
+      padding: 60px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-  .deadline-chip {
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: 600;
-  }
-  .m1 .deadline-chip { background: #c8e6c9; color: #2e7d32; }
-  .m2 .deadline-chip { background: #ffe082; color: #e65100; }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 20% 80%, rgba(200, 168, 75, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(76, 175, 80, 0.2) 0%, transparent 50%);
+    }
 
-  .milestone-body { padding: 0; display: block; }
-  .milestone-body.collapsed { display: none; }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
-  /* ACTIVITY CARDS */
-  .activities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1px;
-    background: var(--border);
-  }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(200, 168, 75, 0.25);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 4px 16px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
 
-  .activity-card {
-    background: white;
-    padding: 24px 28px;
-  }
-  .activity-month {
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--green-light);
-    margin-bottom: 8px;
-  }
-  .activity-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
-    color: var(--green-deep);
-    margin-bottom: 12px;
-  }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 5vw, 44px);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
 
-  /* UPLOAD ZONES */
-  .upload-zone {
-    border: 2px dashed var(--border);
-    border-radius: 12px;
-    padding: 16px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.2s;
-    margin-bottom: 12px;
-    position: relative;
-  }
-  .upload-zone:hover { border-color: var(--green-light); background: var(--green-pale); }
-  .upload-zone input[type="file"] {
-    position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%;
-  }
-  .upload-icon { font-size: 24px; margin-bottom: 4px; }
-  .upload-label { font-size: 12px; color: var(--muted); }
-  .upload-label strong { color: var(--green-mid); display: block; font-size: 13px; margin-bottom: 2px; }
+    .hero h1 span {
+      color: var(--gold);
+    }
 
-  /* TEXT AREAS */
-  .field-group { margin-bottom: 14px; }
-  .field-group label {
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--muted);
-    display: block;
-    margin-bottom: 5px;
-  }
-  .field-group textarea, .field-group input[type="text"] {
-    width: 100%;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 10px 14px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    color: var(--charcoal);
-    resize: vertical;
-    outline: none;
-    transition: border-color 0.2s;
-  }
-  .field-group textarea:focus, .field-group input:focus { border-color: var(--green-light); }
-  .field-group textarea { min-height: 80px; }
+    .hero p {
+      font-size: 15px;
+      opacity: 0.75;
+      margin-bottom: 30px;
+    }
 
-  /* STATUS BADGES */
-  .status-row { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }
-  .status-select {
-    padding: 6px 12px;
-    border-radius: 20px;
-    border: 1px solid var(--border);
-    font-size: 12px;
-    font-family: 'DM Sans', sans-serif;
-    outline: none;
-    cursor: pointer;
-    background: white;
-  }
-  .save-btn {
-    padding: 7px 18px;
-    background: var(--green-deep);
-    color: white;
-    border: none;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .save-btn:hover { background: var(--green-mid); }
+    /* GROUP INFO CARD */
+    .group-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      text-align: left;
+      backdrop-filter: blur(10px);
+    }
 
-  /* MEMBERS TABLE */
-  .members-section {
-    padding: 28px;
-    border-top: 1px solid var(--border);
-  }
-  .members-section h4 { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--green-deep); margin-bottom: 14px; }
-  .members-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .members-table th {
-    text-align: left;
-    padding: 8px 12px;
-    background: var(--green-pale);
-    color: var(--green-deep);
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  .members-table td {
-    padding: 8px 12px;
-    border-bottom: 1px solid var(--border);
-  }
-  .members-table td input {
-    width: 100%;
-    border: none;
-    outline: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    background: transparent;
-  }
+    .group-field label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gold);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 4px;
+    }
 
-  /* ===== POSTER SECTION ===== */
-  .poster-section {
-    background: white;
-    border-radius: 20px;
-    border: 2px solid var(--gold);
-    padding: 32px;
-    margin-bottom: 24px;
-    box-shadow: 0 4px 24px rgba(200,168,75,0.1);
-  }
-  .poster-section h3 { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--green-deep); margin-bottom: 6px; }
-  .poster-section p { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
-  .poster-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .group-field input,
+    .group-field select {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 8px 12px;
+      color: white;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      width: 100%;
+      outline: none;
+    }
 
-  /* ===== SUBMISSION PANEL ===== */
-  .submission-panel {
-    background: var(--green-deep);
-    color: white;
-    border-radius: 20px;
-    padding: 32px;
-  }
-  .submission-panel h3 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 6px; }
-  .submission-panel p { font-size: 13px; opacity: 0.7; margin-bottom: 24px; }
-  .deadline-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
-  .deadline-card {
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 14px;
-    padding: 18px;
-  }
-  .deadline-card .d-tag { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 6px; }
-  .deadline-card .d-date { font-size: 18px; font-weight: 700; }
-  .deadline-card .d-desc { font-size: 12px; opacity: 0.6; margin-top: 2px; }
-  .submit-btn {
-    width: 100%;
-    padding: 14px;
-    background: var(--gold);
-    color: var(--green-deep);
-    border: none;
-    border-radius: 12px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: opacity 0.2s;
-  }
-  .submit-btn:hover { opacity: 0.9; }
+    .group-field input::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
 
-  /* ===== EXPAND TOGGLE ===== */
-  .toggle-arrow { font-size: 20px; transition: transform 0.3s; }
-  .toggle-arrow.open { transform: rotate(180deg); }
+    .group-field input:focus {
+      border-color: var(--gold);
+    }
 
-  /* ===== PRINT ===== */
-  @media print {
-    .site-header, .submit-btn, .save-btn { display: none; }
-    .milestone-body.collapsed { display: block !important; }
-  }
-  @media (max-width: 600px) {
-    .header-nav { display: none; }
-    .timeline { flex-wrap: wrap; gap: 10px; }
-    .deadline-cards { grid-template-columns: 1fr; }
-  }
-</style>
+    /* ===== MAIN LAYOUT ===== */
+    .main-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 24px 60px;
+    }
+
+    /* ===== PROGRESS TRACKER ===== */
+    .progress-section {
+      margin-bottom: 40px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--green-deep);
+      margin-bottom: 20px;
+    }
+
+    .timeline {
+      display: flex;
+      gap: 0;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      right: 22px;
+      height: 2px;
+      background: var(--border);
+      z-index: 0;
+    }
+
+    .milestone-step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .step-dot {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 8px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: all 0.3s;
+      border: 2px solid var(--border);
+      background: white;
+      color: var(--muted);
+    }
+
+    .step-dot.done {
+      background: var(--green-light);
+      border-color: var(--green-light);
+      color: white;
+    }
+
+    .step-dot.active {
+      background: var(--green-deep);
+      border-color: var(--green-deep);
+      color: var(--gold);
+    }
+
+    .step-dot.pending {
+      background: white;
+      border-color: var(--border);
+      color: var(--muted);
+    }
+
+    .step-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+      line-height: 1.3;
+    }
+
+    .step-date {
+      font-size: 10px;
+      color: var(--gold);
+      margin-top: 2px;
+    }
+
+    /* ===== MILESTONE PANELS ===== */
+    .milestones-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .milestone-panel {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+
+    .milestone-panel:hover {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .milestone-header {
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .milestone-header.m1 {
+      background: linear-gradient(90deg, #e8f5e9, #f1f8e9);
+      border-bottom: 1px solid #c8e6c9;
+    }
+
+    .milestone-header.m2 {
+      background: linear-gradient(90deg, #fff8e1, #fffde7);
+      border-bottom: 1px solid #ffe082;
+    }
+
+    .milestone-badge {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .badge-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .m1 .badge-icon {
+      background: var(--green-pale);
+    }
+
+    .m2 .badge-icon {
+      background: var(--gold-light);
+    }
+
+    .milestone-meta h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: var(--green-deep);
+    }
+
+    .milestone-meta p {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .deadline-chip {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .m1 .deadline-chip {
+      background: #c8e6c9;
+      color: #2e7d32;
+    }
+
+    .m2 .deadline-chip {
+      background: #ffe082;
+      color: #e65100;
+    }
+
+    .milestone-body {
+      padding: 0;
+      display: block;
+    }
+
+    .milestone-body.collapsed {
+      display: none;
+    }
+
+    /* ACTIVITY CARDS */
+    .activities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .activity-card {
+      background: white;
+      padding: 24px 28px;
+    }
+
+    .activity-month {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--green-light);
+      margin-bottom: 8px;
+    }
+
+    .activity-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      color: var(--green-deep);
+      margin-bottom: 12px;
+    }
+
+    /* UPLOAD ZONES */
+    .upload-zone {
+      border: 2px dashed var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .upload-zone:hover {
+      border-color: var(--green-light);
+      background: var(--green-pale);
+    }
+
+    .upload-zone input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+
+    .upload-icon {
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .upload-label {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .upload-label strong {
+      color: var(--green-mid);
+      display: block;
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+
+    /* TEXT AREAS */
+    .field-group {
+      margin-bottom: 14px;
+    }
+
+    .field-group label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .field-group textarea,
+    .field-group input[type="text"] {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      color: var(--charcoal);
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .field-group textarea:focus,
+    .field-group input:focus {
+      border-color: var(--green-light);
+    }
+
+    .field-group textarea {
+      min-height: 80px;
+    }
+
+    /* STATUS BADGES */
+    .status-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 12px;
+    }
+
+    .status-select {
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      font-size: 12px;
+      font-family: 'DM Sans', sans-serif;
+      outline: none;
+      cursor: pointer;
+      background: white;
+    }
+
+    .save-btn {
+      padding: 7px 18px;
+      background: var(--green-deep);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .save-btn:hover {
+      background: var(--green-mid);
+    }
+
+    /* MEMBERS TABLE */
+    .members-section {
+      padding: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    .members-section h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      color: var(--green-deep);
+      margin-bottom: 14px;
+    }
+
+    .members-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .members-table th {
+      text-align: left;
+      padding: 8px 12px;
+      background: var(--green-pale);
+      color: var(--green-deep);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .members-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .members-table td input {
+      width: 100%;
+      border: none;
+      outline: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      background: transparent;
+    }
+
+    /* ===== POSTER SECTION ===== */
+    .poster-section {
+      background: white;
+      border-radius: 20px;
+      border: 2px solid var(--gold);
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 24px rgba(200, 168, 75, 0.1);
+    }
+
+    .poster-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: var(--green-deep);
+      margin-bottom: 6px;
+    }
+
+    .poster-section p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .poster-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    /* ===== SUBMISSION PANEL ===== */
+    .submission-panel {
+      background: var(--green-deep);
+      color: white;
+      border-radius: 20px;
+      padding: 32px;
+    }
+
+    .submission-panel h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .submission-panel p {
+      font-size: 13px;
+      opacity: 0.7;
+      margin-bottom: 24px;
+    }
+
+    .deadline-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .deadline-card {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .deadline-card .d-tag {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .deadline-card .d-date {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .deadline-card .d-desc {
+      font-size: 12px;
+      opacity: 0.6;
+      margin-top: 2px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--gold);
+      color: var(--green-deep);
+      border: none;
+      border-radius: 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .submit-btn:hover {
+      opacity: 0.9;
+    }
+
+    /* ===== EXPAND TOGGLE ===== */
+    .toggle-arrow {
+      font-size: 20px;
+      transition: transform 0.3s;
+    }
+
+    .toggle-arrow.open {
+      transform: rotate(180deg);
+    }
+
+    /* ===== PRINT ===== */
+    @media print {
+
+      .site-header,
+      .submit-btn,
+      .save-btn {
+        display: none;
+      }
+
+      .milestone-body.collapsed {
+        display: block !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-nav {
+        display: none;
+      }
+
+      .timeline {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .deadline-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="header-inner">
-    <div class="header-logo">
-      <div class="knec-badge">KNEC</div>
-      <div class="header-title">
-        Agriculture Project Portfolio
-        <small>KCSE 2026 · Paper 443/3</small>
-      </div>
-    </div>
-    <nav class="header-nav">
-      <a href="#milestone1" class="nav-pill active">Milestone I</a>
-      <a href="#milestone2" class="nav-pill">Milestone II</a>
-      <a href="#submission" class="nav-pill">Submit</a>
-    </nav>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-tag">Electronic Project Portfolio</div>
-    <h1>KCSE Agriculture <span>Project 2026</span></h1>
-    <p>Sustainable Livestock Rearing Enterprise · January – July 2026</p>
-    <div class="group-card">
-      <div class="group-field">
-        <label>School Name</label>
-        <input type="text" placeholder="e.g. Nairobi High School">
-      </div>
-      <div class="group-field">
-        <label>Group Number</label>
-        <input type="text" placeholder="e.g. Group 3">
-      </div>
-      <div class="group-field">
-        <label>Livestock Enterprise</label>
-        <select>
-          <option value="">Select enterprise…</option>
-          <option value="chicken" selected>Chicken (2 per group)</option>
-          <option value="rabbits">Rabbits (2 per group)</option>
-          <option value="pigs">Pigs (2 per group)</option>
-          <option value="goats">Goats/Sheep (1 per group)</option>
-        </select>
-      </div>
-      <div class="group-field">
-        <label>Agriculture Teacher</label>
-        <input type="text" placeholder="Full Name">
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="main-wrap">
-
-  <!-- PROGRESS TIMELINE -->
-  <div class="progress-section">
-    <div class="section-label">Project Timeline</div>
-    <div class="section-title">Progress Overview</div>
-    <div class="timeline">
-      <div class="milestone-step">
-        <div class="step-dot done">✓</div>
-        <div class="step-label">January<br>Locality Analysis</div>
-        <div class="step-date">M1</div>
-      </div>
-      <div class="milestone-step">
-        <div class="step-dot done">✓</div>
-        <div class="step-label">February<br>Solution Design</div>
-        <div class="step-date">M1</div>
-      </div>
-      <div class="milestone-step">
-        <div class="step-dot active">3</div>
-        <div class="step-label">March<br>Infrastructure</div>
-        <div class="step-date">Upload 31 Mar</div>
-      </div>
-      <div class="milestone-step">
-        <div class="step-dot pending">4</div>
-        <div class="step-label">Apr–May<br>Rearing</div>
-        <div class="step-date">M2</div>
-      </div>
-      <div class="milestone-step">
-        <div class="step-dot pending">5</div>
-        <div class="step-label">June<br>Value Addition</div>
-        <div class="step-date">M2</div>
-      </div>
-      <div class="milestone-step">
-        <div class="step-dot pending">6</div>
-        <div class="step-label">July<br>Sales & Report</div>
-        <div class="step-date">Upload 31 Jul</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- GROUP POSTER -->
-  <div class="poster-section">
-    <div class="section-label">Project Identification</div>
-    <h3>Group Poster Details</h3>
-    <p>As required by KNEC (Section 2.3) — fill in all member details below. This forms the official group identification poster.</p>
-    <div class="members-section" style="padding: 0;">
-      <table class="members-table">
-        <thead>
-          <tr>
-            <th style="width:40px">#</th>
-            <th>Full Name</th>
-            <th>Index Number</th>
-            <th>Role / Part Presented</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td><input type="text" placeholder="Member 1 name"></td><td><input type="text" placeholder="Index No."></td><td><input type="text" placeholder="e.g. Locality Analysis"></td></tr>
-          <tr><td>2</td><td><input type="text" placeholder="Member 2 name"></td><td><input type="text" placeholder="Index No."></td><td><input type="text" placeholder="e.g. Market Research"></td></tr>
-          <tr><td>3</td><td><input type="text" placeholder="Member 3 name"></td><td><input type="text" placeholder="Index No."></td><td><input type="text" placeholder="e.g. Infrastructure"></td></tr>
-          <tr><td>4</td><td><input type="text" placeholder="Member 4 name"></td><td><input type="text" placeholder="Index No."></td><td><input type="text" placeholder="e.g. Value Addition"></td></tr>
-          <tr><td>5</td><td><input type="text" placeholder="Member 5 name"></td><td><input type="text" placeholder="Index No."></td><td><input type="text" placeholder="e.g. Marketing & Sales"></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- MILESTONE I -->
-  <div class="milestones-grid">
-    <div class="milestone-panel" id="milestone1">
-      <div class="milestone-header m1" onclick="toggleMilestone('m1body', this)">
-        <div class="milestone-badge">
-          <div class="badge-icon">🌱</div>
-          <div class="milestone-meta">
-            <h3>Milestone I — Planning & Setup</h3>
-            <p>January · February · March 2026</p>
-          </div>
-        </div>
-        <div style="display:flex; align-items:center; gap:12px;">
-          <div class="deadline-chip">Upload by 31st March 2026</div>
-          <span class="toggle-arrow open" id="m1arrow">▾</span>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <div class="knec-badge">KNEC</div>
+        <div class="header-title">
+          Agriculture Project Portfolio
+          <small>KCSE 2026 · Paper 443/3</small>
         </div>
       </div>
+      <nav class="header-nav">
+        <a href="#milestone1" class="nav-pill active">Milestone I</a>
+        <a href="#milestone2" class="nav-pill">Milestone II</a>
+        <a href="#submission" class="nav-pill">Submit</a>
+      </nav>
+    </div>
+  </header>
 
-      <div class="milestone-body" id="m1body">
-        <div class="activities-grid">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-tag">Electronic Project Portfolio</div>
+      <h1>KCSE Agriculture <span>Project 2026</span></h1>
+      <p>Sustainable Livestock Rearing Enterprise · January – July 2026</p>
+      <div class="group-card">
+        <div class="group-field">
+          <label>School Name</label>
+          <input type="text" placeholder="e.g. Nairobi High School">
+        </div>
+        <div class="group-field">
+          <label>Group Number</label>
+          <input type="text" placeholder="e.g. Group 3">
+        </div>
+        <div class="group-field">
+          <label>Livestock Enterprise</label>
+          <select>
+            <option value="">Select enterprise…</option>
+            <option value="chicken" selected>Chicken (2 per group)</option>
+            <option value="rabbits">Rabbits (2 per group)</option>
+            <option value="pigs">Pigs (2 per group)</option>
+            <option value="goats">Goats/Sheep (1 per group)</option>
+          </select>
+        </div>
+        <div class="group-field">
+          <label>Agriculture Teacher</label>
+          <input type="text" placeholder="Full Name">
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <!-- JANUARY -->
-          <div class="activity-card">
-            <div class="activity-month">📍 January — Locality Analysis & Problem Identification</div>
-            <div class="activity-title">Resource Mapping & Market Survey</div>
-            <div class="field-group">
-              <label>Available Resources (land, water, feed)</label>
-              <textarea placeholder="Describe resources available in your school locality…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Challenges Identified</label>
-              <textarea placeholder="e.g. high feed costs, water scarcity, disease outbreaks, market price fluctuations…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Popular Livestock Products in the Area</label>
-              <textarea placeholder="List the key products demanded by consumers…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Target Customers Identified</label>
-              <textarea placeholder="e.g. households, restaurants, schools, retailers…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Demand Forecast Summary</label>
-              <textarea placeholder="Estimate based on population growth, income, dietary trends…"></textarea>
-            </div>
-            <div class="upload-zone">
-              <input type="file" accept="video/*,image/*,.pdf">
-              <div class="upload-icon">🎥</div>
-              <div class="upload-label"><strong>Individual Presentation Video</strong>Upload recording of group presentation</div>
-            </div>
-            <div class="status-row">
-              <select class="status-select">
-                <option>⬜ Not Started</option>
-                <option>🟡 In Progress</option>
-                <option>🟢 Complete</option>
-              </select>
-              <button class="save-btn">Save Entry</button>
-            </div>
-          </div>
+  <div class="main-wrap">
 
-          <!-- FEBRUARY -->
-          <div class="activity-card">
-            <div class="activity-month">📋 February — Solution Design & Project Proposal</div>
-            <div class="activity-title">Enterprise Selection & Proposal</div>
-            <div class="field-group">
-              <label>Enterprises Compared</label>
-              <textarea placeholder="List all enterprises analysed with their pros and cons…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Selected Enterprise & Justification</label>
-              <textarea placeholder="State the chosen enterprise and explain WHY it was selected (profitability, resources, market demand, sustainability)…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Project Aims & Objectives</label>
-              <textarea placeholder="What does the project aim to achieve?"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Key Phases & Duration</label>
-              <textarea placeholder="Outline the phases and their expected duration…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Inputs Required (capital, equipment, labour)</label>
-              <textarea placeholder="List all inputs needed…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Long-term Viability Plan</label>
-              <textarea placeholder="How will the project remain viable?"></textarea>
-            </div>
-            <div class="upload-zone">
-              <input type="file" accept="video/*,.pdf,.pptx">
-              <div class="upload-icon">🎥</div>
-              <div class="upload-label"><strong>Group Class Presentation Video</strong>Upload recording of class presentation</div>
-            </div>
-            <div class="status-row">
-              <select class="status-select">
-                <option>⬜ Not Started</option>
-                <option>🟡 In Progress</option>
-                <option>🟢 Complete</option>
-              </select>
-              <button class="save-btn">Save Entry</button>
-            </div>
-          </div>
-
-          <!-- MARCH -->
-          <div class="activity-card">
-            <div class="activity-month">🏗️ March — Infrastructure Setup & Stocking</div>
-            <div class="activity-title">Housing Construction & Animal Welfare</div>
-            <div class="field-group">
-              <label>Housing Design Description</label>
-              <textarea placeholder="Describe the climate-smart housing design, materials used…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Biosecurity Measures Implemented</label>
-              <textarea placeholder="List biosecurity and animal welfare measures…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Stocking Details (number, breed, source)</label>
-              <textarea placeholder="e.g. 2 Kienyeji chickens sourced from…"></textarea>
-            </div>
-            <div class="upload-zone">
-              <input type="file" accept="image/*" multiple>
-              <div class="upload-icon">📸</div>
-              <div class="upload-label"><strong>Construction & Stocking Photos</strong>Upload photos of housing and stocked enterprise</div>
-            </div>
-            <div class="upload-zone">
-              <input type="file" accept="video/*">
-              <div class="upload-icon">🎥</div>
-              <div class="upload-label"><strong>Stocking Video</strong>Upload video evidence</div>
-            </div>
-            <div class="status-row">
-              <select class="status-select">
-                <option>⬜ Not Started</option>
-                <option>🟡 In Progress</option>
-                <option>🟢 Complete</option>
-              </select>
-              <button class="save-btn">Save Entry</button>
-            </div>
-          </div>
+    <!-- PROGRESS TIMELINE -->
+    <div class="progress-section">
+      <div class="section-label">Project Timeline</div>
+      <div class="section-title">Progress Overview</div>
+      <div class="timeline">
+        <div class="milestone-step">
+          <div class="step-dot done">✓</div>
+          <div class="step-label">January<br>Locality Analysis</div>
+          <div class="step-date">M1</div>
+        </div>
+        <div class="milestone-step">
+          <div class="step-dot done">✓</div>
+          <div class="step-label">February<br>Solution Design</div>
+          <div class="step-date">M1</div>
+        </div>
+        <div class="milestone-step">
+          <div class="step-dot active">3</div>
+          <div class="step-label">March<br>Infrastructure</div>
+          <div class="step-date">Upload 31 Mar</div>
+        </div>
+        <div class="milestone-step">
+          <div class="step-dot pending">4</div>
+          <div class="step-label">Apr–May<br>Rearing</div>
+          <div class="step-date">M2</div>
+        </div>
+        <div class="milestone-step">
+          <div class="step-dot pending">5</div>
+          <div class="step-label">June<br>Value Addition</div>
+          <div class="step-date">M2</div>
+        </div>
+        <div class="milestone-step">
+          <div class="step-dot pending">6</div>
+          <div class="step-label">July<br>Sales & Report</div>
+          <div class="step-date">Upload 31 Jul</div>
         </div>
       </div>
     </div>
 
-    <!-- MILESTONE II -->
-    <div class="milestone-panel" id="milestone2">
-      <div class="milestone-header m2" onclick="toggleMilestone('m2body', this)">
-        <div class="milestone-badge">
-          <div class="badge-icon">🐔</div>
-          <div class="milestone-meta">
-            <h3>Milestone II — Rearing, Value Addition & Sales</h3>
-            <p>April · May · June · July 2026</p>
+    <!-- GROUP POSTER -->
+    <div class="poster-section">
+      <div class="section-label">Project Identification</div>
+      <h3>Group Poster Details</h3>
+      <p>As required by KNEC (Section 2.3) — fill in all member details below. This forms the official group
+        identification poster.</p>
+      <div class="members-section" style="padding: 0;">
+        <table class="members-table">
+          <thead>
+            <tr>
+              <th style="width:40px">#</th>
+              <th>Full Name</th>
+              <th>Index Number</th>
+              <th>Role / Part Presented</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><input type="text" placeholder="Member 1 name"></td>
+              <td><input type="text" placeholder="Index No."></td>
+              <td><input type="text" placeholder="e.g. Locality Analysis"></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><input type="text" placeholder="Member 2 name"></td>
+              <td><input type="text" placeholder="Index No."></td>
+              <td><input type="text" placeholder="e.g. Market Research"></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><input type="text" placeholder="Member 3 name"></td>
+              <td><input type="text" placeholder="Index No."></td>
+              <td><input type="text" placeholder="e.g. Infrastructure"></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><input type="text" placeholder="Member 4 name"></td>
+              <td><input type="text" placeholder="Index No."></td>
+              <td><input type="text" placeholder="e.g. Value Addition"></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><input type="text" placeholder="Member 5 name"></td>
+              <td><input type="text" placeholder="Index No."></td>
+              <td><input type="text" placeholder="e.g. Marketing & Sales"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- MILESTONE I -->
+    <div class="milestones-grid">
+      <div class="milestone-panel" id="milestone1">
+        <div class="milestone-header m1" onclick="toggleMilestone('m1body', this)">
+          <div class="milestone-badge">
+            <div class="badge-icon">🌱</div>
+            <div class="milestone-meta">
+              <h3>Milestone I — Planning & Setup</h3>
+              <p>January · February · March 2026</p>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="deadline-chip">Upload by 31st March 2026</div>
+            <span class="toggle-arrow open" id="m1arrow">▾</span>
           </div>
         </div>
-        <div style="display:flex; align-items:center; gap:12px;">
-          <div class="deadline-chip">Upload by 31st July 2026</div>
-          <span class="toggle-arrow open" id="m2arrow">▾</span>
+
+        <div class="milestone-body" id="m1body">
+          <div class="activities-grid">
+
+            <!-- JANUARY -->
+            <div class="activity-card">
+              <div class="activity-month">📍 January — Locality Analysis & Problem Identification</div>
+              <div class="activity-title">Resource Mapping & Market Survey</div>
+              <div class="field-group">
+                <label>Available Resources (land, water, feed)</label>
+                <textarea placeholder="Describe resources available in your school locality…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Challenges Identified</label>
+                <textarea
+                  placeholder="e.g. high feed costs, water scarcity, disease outbreaks, market price fluctuations…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Popular Livestock Products in the Area</label>
+                <textarea placeholder="List the key products demanded by consumers…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Target Customers Identified</label>
+                <textarea placeholder="e.g. households, restaurants, schools, retailers…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Demand Forecast Summary</label>
+                <textarea placeholder="Estimate based on population growth, income, dietary trends…"></textarea>
+              </div>
+              <div class="upload-zone">
+                <input type="file" accept="video/*,image/*,.pdf">
+                <div class="upload-icon">🎥</div>
+                <div class="upload-label"><strong>Individual Presentation Video</strong>Upload recording of group
+                  presentation</div>
+              </div>
+              <div class="status-row">
+                <select class="status-select">
+                  <option>⬜ Not Started</option>
+                  <option>🟡 In Progress</option>
+                  <option>🟢 Complete</option>
+                </select>
+                <button class="save-btn">Save Entry</button>
+              </div>
+            </div>
+
+            <!-- FEBRUARY -->
+            <div class="activity-card">
+              <div class="activity-month">📋 February — Solution Design & Project Proposal</div>
+              <div class="activity-title">Enterprise Selection & Proposal</div>
+              <div class="field-group">
+                <label>Enterprises Compared</label>
+                <textarea placeholder="List all enterprises analysed with their pros and cons…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Selected Enterprise & Justification</label>
+                <textarea
+                  placeholder="State the chosen enterprise and explain WHY it was selected (profitability, resources, market demand, sustainability)…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Project Aims & Objectives</label>
+                <textarea placeholder="What does the project aim to achieve?"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Key Phases & Duration</label>
+                <textarea placeholder="Outline the phases and their expected duration…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Inputs Required (capital, equipment, labour)</label>
+                <textarea placeholder="List all inputs needed…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Long-term Viability Plan</label>
+                <textarea placeholder="How will the project remain viable?"></textarea>
+              </div>
+              <div class="upload-zone">
+                <input type="file" accept="video/*,.pdf,.pptx">
+                <div class="upload-icon">🎥</div>
+                <div class="upload-label"><strong>Group Class Presentation Video</strong>Upload recording of class
+                  presentation</div>
+              </div>
+              <div class="status-row">
+                <select class="status-select">
+                  <option>⬜ Not Started</option>
+                  <option>🟡 In Progress</option>
+                  <option>🟢 Complete</option>
+                </select>
+                <button class="save-btn">Save Entry</button>
+              </div>
+            </div>
+
+            <!-- MARCH -->
+            <div class="activity-card">
+              <div class="activity-month">🏗️ March — Infrastructure Setup & Stocking</div>
+              <div class="activity-title">Housing Construction & Animal Welfare</div>
+              <div class="field-group">
+                <label>Housing Design Description</label>
+                <textarea placeholder="Describe the climate-smart housing design, materials used…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Biosecurity Measures Implemented</label>
+                <textarea placeholder="List biosecurity and animal welfare measures…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Stocking Details (number, breed, source)</label>
+                <textarea placeholder="e.g. 2 Kienyeji chickens sourced from…"></textarea>
+              </div>
+              <div class="upload-zone">
+                <input type="file" accept="image/*" multiple>
+                <div class="upload-icon">📸</div>
+                <div class="upload-label"><strong>Construction & Stocking Photos</strong>Upload photos of housing and
+                  stocked enterprise</div>
+              </div>
+              <div class="upload-zone">
+                <input type="file" accept="video/*">
+                <div class="upload-icon">🎥</div>
+                <div class="upload-label"><strong>Stocking Video</strong>Upload video evidence</div>
+              </div>
+              <div class="status-row">
+                <select class="status-select">
+                  <option>⬜ Not Started</option>
+                  <option>🟡 In Progress</option>
+                  <option>🟢 Complete</option>
+                </select>
+                <button class="save-btn">Save Entry</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="milestone-body" id="m2body">
-        <div class="activities-grid">
-
-          <!-- APRIL-MAY -->
-          <div class="activity-card">
-            <div class="activity-month">🌿 April–May — Rearing & Routine Management</div>
-            <div class="activity-title">Daily Care, Health & Record Keeping</div>
-            <div class="field-group">
-              <label>Feeding Schedule & Feed Type Used</label>
-              <textarea placeholder="Describe the feeding regime, quantities, frequency…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Health Interventions (vaccination, deworming)</label>
-              <textarea placeholder="Record dates, products used, dosages…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Production / Growth Data Summary</label>
-              <textarea placeholder="Record weight gain, egg production, mortality rates…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Value Addition Trials (preliminary write-up)</label>
-              <textarea placeholder="Describe proposed value addition process and small-scale trials…"></textarea>
-            </div>
-            <div class="upload-zone">
-              <input type="file" accept="video/*" multiple>
-              <div class="upload-icon">🎥</div>
-              <div class="upload-label"><strong>Routine Management Videos</strong>Upload daily care footage</div>
-            </div>
-            <div class="upload-zone">
-              <input type="file" accept=".pdf,.docx,image/*">
-              <div class="upload-icon">📄</div>
-              <div class="upload-label"><strong>Records & Write-up</strong>Upload typed/scanned records</div>
-            </div>
-            <div class="status-row">
-              <select class="status-select">
-                <option>⬜ Not Started</option>
-                <option>🟡 In Progress</option>
-                <option>🟢 Complete</option>
-              </select>
-              <button class="save-btn">Save Entry</button>
+      <!-- MILESTONE II -->
+      <div class="milestone-panel" id="milestone2">
+        <div class="milestone-header m2" onclick="toggleMilestone('m2body', this)">
+          <div class="milestone-badge">
+            <div class="badge-icon">🐔</div>
+            <div class="milestone-meta">
+              <h3>Milestone II — Rearing, Value Addition & Sales</h3>
+              <p>April · May · June · July 2026</p>
             </div>
           </div>
-
-          <!-- JUNE -->
-          <div class="activity-card">
-            <div class="activity-month">💰 June — Value Addition & Marketing Strategy</div>
-            <div class="activity-title">Processing, Branding & Revenue Projections</div>
-            <div class="field-group">
-              <label>Value Addition Process Description</label>
-              <textarea placeholder="e.g. dressed chicken, egg grading/packaging, sausages…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Packaging & Quality Standards</label>
-              <textarea placeholder="Describe packaging design and quality control measures…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Pricing Strategy</label>
-              <textarea placeholder="Cost of production, selling price, expected profit margin…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Distribution Channels</label>
-              <textarea placeholder="e.g. farm gate, local market, delivery, partnerships with schools…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Promotion Methods</label>
-              <textarea placeholder="e.g. social media, flyers, word-of-mouth…"></textarea>
-            </div>
-            <div class="field-group">
-              <label>Revenue Projections (KES)</label>
-              <textarea placeholder="Estimated production costs, selling price, expected revenue…"></textarea>
-            </div>
-            <div class="upload-zone">
-              <input type="file" accept="image/*,video/*" multiple>
-              <div class="upload-icon">📸</div>
-              <div class="upload-label"><strong>Value Addition Photos & Videos</strong>Upload evidence of processing</div>
-            </div>
-            <div class="status-row">
-              <select class="status-select">
-                <option>⬜ Not Started</option>
-                <option>🟡 In Progress</option>
-                <option>🟢 Complete</option>
-              </select>
-              <button class="save-btn">Save Entry</button>
-            </div>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="deadline-chip">Upload by 31st July 2026</div>
+            <span class="toggle-arrow open" id="m2arrow">▾</span>
           </div>
+        </div>
 
-          <!-- JULY -->
-          <div class="activity-card">
-            <div class="activity-month">📊 July — Marketing, Sales & Final Reporting</div>
-            <div class="activity-title">Sales Results, Reflection & Stakeholder Presentation</div>
-            <div class="field-group">
-              <label>Sales Data (quantity sold, revenue, customer feedback)</label>
-              <textarea placeholder="Record all sales — date, product, quantity, price, buyer…"></textarea>
+        <div class="milestone-body" id="m2body">
+          <div class="activities-grid">
+
+            <!-- APRIL-MAY -->
+            <div class="activity-card">
+              <div class="activity-month">🌿 April–May — Rearing & Routine Management</div>
+              <div class="activity-title">Daily Care, Health & Record Keeping</div>
+              <div class="field-group">
+                <label>Feeding Schedule & Feed Type Used</label>
+                <textarea placeholder="Describe the feeding regime, quantities, frequency…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Health Interventions (vaccination, deworming)</label>
+                <textarea placeholder="Record dates, products used, dosages…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Production / Growth Data Summary</label>
+                <textarea placeholder="Record weight gain, egg production, mortality rates…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Value Addition Trials (preliminary write-up)</label>
+                <textarea placeholder="Describe proposed value addition process and small-scale trials…"></textarea>
+              </div>
+              <div class="upload-zone">
+                <input type="file" accept="video/*" multiple>
+                <div class="upload-icon">🎥</div>
+                <div class="upload-label"><strong>Routine Management Videos</strong>Upload daily care footage</div>
+              </div>
+              <div class="upload-zone">
+                <input type="file" accept=".pdf,.docx,image/*">
+                <div class="upload-icon">📄</div>
+                <div class="upload-label"><strong>Records & Write-up</strong>Upload typed/scanned records</div>
+              </div>
+              <div class="status-row">
+                <select class="status-select">
+                  <option>⬜ Not Started</option>
+                  <option>🟡 In Progress</option>
+                  <option>🟢 Complete</option>
+                </select>
+                <button class="save-btn">Save Entry</button>
+              </div>
             </div>
-            <div class="field-group">
-              <label>Profit & Sustainability Analysis</label>
-              <textarea placeholder="Actual profit vs projected. Sustainability outlook…"></textarea>
+
+            <!-- JUNE -->
+            <div class="activity-card">
+              <div class="activity-month">💰 June — Value Addition & Marketing Strategy</div>
+              <div class="activity-title">Processing, Branding & Revenue Projections</div>
+              <div class="field-group">
+                <label>Value Addition Process Description</label>
+                <textarea placeholder="e.g. dressed chicken, egg grading/packaging, sausages…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Packaging & Quality Standards</label>
+                <textarea placeholder="Describe packaging design and quality control measures…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Pricing Strategy</label>
+                <textarea placeholder="Cost of production, selling price, expected profit margin…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Distribution Channels</label>
+                <textarea placeholder="e.g. farm gate, local market, delivery, partnerships with schools…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Promotion Methods</label>
+                <textarea placeholder="e.g. social media, flyers, word-of-mouth…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Revenue Projections (KES)</label>
+                <textarea placeholder="Estimated production costs, selling price, expected revenue…"></textarea>
+              </div>
+              <div class="upload-zone">
+                <input type="file" accept="image/*,video/*" multiple>
+                <div class="upload-icon">📸</div>
+                <div class="upload-label"><strong>Value Addition Photos & Videos</strong>Upload evidence of processing
+                </div>
+              </div>
+              <div class="status-row">
+                <select class="status-select">
+                  <option>⬜ Not Started</option>
+                  <option>🟡 In Progress</option>
+                  <option>🟢 Complete</option>
+                </select>
+                <button class="save-btn">Save Entry</button>
+              </div>
             </div>
-            <div class="field-group">
-              <label>Lessons Learned & Future Improvements</label>
-              <textarea placeholder="What went well? What would you do differently?"></textarea>
-            </div>
-            <div class="upload-zone">
-              <input type="file" accept="video/*">
-              <div class="upload-icon">🎥</div>
-              <div class="upload-label"><strong>Individual Reflection Video (3–5 mins)</strong>Each member uploads their own reflection clip</div>
-            </div>
-            <div class="upload-zone">
-              <input type="file" accept="image/*" multiple>
-              <div class="upload-icon">📸</div>
-              <div class="upload-label"><strong>Final Photo (Principal + Teacher + Candidates)</strong>.gif or .jpeg format, full school uniform</div>
-            </div>
-            <div class="upload-zone">
-              <input type="file" accept="video/*,image/*" multiple>
-              <div class="upload-icon">📸</div>
-              <div class="upload-label"><strong>Marketing & Sales Evidence</strong>Photos and videos of sales activities</div>
-            </div>
-            <div class="status-row">
-              <select class="status-select">
-                <option>⬜ Not Started</option>
-                <option>🟡 In Progress</option>
-                <option>🟢 Complete</option>
-              </select>
-              <button class="save-btn">Save Entry</button>
+
+            <!-- JULY -->
+            <div class="activity-card">
+              <div class="activity-month">📊 July — Marketing, Sales & Final Reporting</div>
+              <div class="activity-title">Sales Results, Reflection & Stakeholder Presentation</div>
+              <div class="field-group">
+                <label>Sales Data (quantity sold, revenue, customer feedback)</label>
+                <textarea placeholder="Record all sales — date, product, quantity, price, buyer…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Profit & Sustainability Analysis</label>
+                <textarea placeholder="Actual profit vs projected. Sustainability outlook…"></textarea>
+              </div>
+              <div class="field-group">
+                <label>Lessons Learned & Future Improvements</label>
+                <textarea placeholder="What went well? What would you do differently?"></textarea>
+              </div>
+              <div class="upload-zone">
+                <input type="file" accept="video/*">
+                <div class="upload-icon">🎥</div>
+                <div class="upload-label"><strong>Individual Reflection Video (3–5 mins)</strong>Each member uploads
+                  their own reflection clip</div>
+              </div>
+              <div class="upload-zone">
+                <input type="file" accept="image/*" multiple>
+                <div class="upload-icon">📸</div>
+                <div class="upload-label"><strong>Final Photo (Principal + Teacher + Candidates)</strong>.gif or .jpeg
+                  format, full school uniform</div>
+              </div>
+              <div class="upload-zone">
+                <input type="file" accept="video/*,image/*" multiple>
+                <div class="upload-icon">📸</div>
+                <div class="upload-label"><strong>Marketing & Sales Evidence</strong>Photos and videos of sales
+                  activities</div>
+              </div>
+              <div class="status-row">
+                <select class="status-select">
+                  <option>⬜ Not Started</option>
+                  <option>🟡 In Progress</option>
+                  <option>🟢 Complete</option>
+                </select>
+                <button class="save-btn">Save Entry</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- SUBMISSION PANEL -->
-  <div class="submission-panel" id="submission" style="margin-top: 32px;">
-    <div class="section-label" style="color: var(--gold);">KNEC Portal Submission</div>
-    <h3>Electronic Submission Checklist</h3>
-    <p>Scores and pictorial evidence must be submitted twice via the KNEC Portal. Once uploaded, scores cannot be altered.</p>
-    <div class="deadline-cards">
-      <div class="deadline-card">
-        <div class="d-tag">Milestone I</div>
-        <div class="d-date">31st March 2026</div>
-        <div class="d-desc">Portal open: 1st–31st March</div>
+    <!-- SUBMISSION PANEL -->
+    <div class="submission-panel" id="submission" style="margin-top: 32px;">
+      <div class="section-label" style="color: var(--gold);">KNEC Portal Submission</div>
+      <h3>Electronic Submission Checklist</h3>
+      <p>Scores and pictorial evidence must be submitted twice via the KNEC Portal. Once uploaded, scores cannot be
+        altered.</p>
+      <div class="deadline-cards">
+        <div class="deadline-card">
+          <div class="d-tag">Milestone I</div>
+          <div class="d-date">31st March 2026</div>
+          <div class="d-desc">Portal open: 1st–31st March</div>
+        </div>
+        <div class="deadline-card">
+          <div class="d-tag">Milestone II</div>
+          <div class="d-date">31st July 2026</div>
+          <div class="d-desc">Portal open: 1st–31st July</div>
+        </div>
       </div>
-      <div class="deadline-card">
-        <div class="d-tag">Milestone II</div>
-        <div class="d-date">31st July 2026</div>
-        <div class="d-desc">Portal open: 1st–31st July</div>
+      <div
+        style="background: rgba(255,255,255,0.07); border-radius: 12px; padding: 16px; margin-bottom: 20px; font-size: 13px; opacity: 0.85; line-height: 1.8;">
+        ✅ Project assessment sheets kept under lock in Principal's office<br>
+        ✅ Scores entered in assessment sheets after every assessment<br>
+        ✅ Index numbers in ascending order matching final examination<br>
+        ✅ Final photo in .gif or .jpeg — Principal + Teacher + Candidates in uniform<br>
+        ✅ Assessment Sheets + Manual Mark Sheets handed to Sub-County Director by first week of August 2026<br>
+        ✅ Centre Report Form completed by Agriculture Teacher
       </div>
+      <button class="submit-btn">📤 Proceed to KNEC Portal Upload</button>
     </div>
-    <div style="background: rgba(255,255,255,0.07); border-radius: 12px; padding: 16px; margin-bottom: 20px; font-size: 13px; opacity: 0.85; line-height: 1.8;">
-      ✅ Project assessment sheets kept under lock in Principal's office<br>
-      ✅ Scores entered in assessment sheets after every assessment<br>
-      ✅ Index numbers in ascending order matching final examination<br>
-      ✅ Final photo in .gif or .jpeg — Principal + Teacher + Candidates in uniform<br>
-      ✅ Assessment Sheets + Manual Mark Sheets handed to Sub-County Director by first week of August 2026<br>
-      ✅ Centre Report Form completed by Agriculture Teacher
-    </div>
-    <button class="submit-btn">📤 Proceed to KNEC Portal Upload</button>
-  </div>
 
-</div><!-- end main-wrap -->
+  </div><!-- end main-wrap -->
 
-<script>
-function toggleMilestone(bodyId, headerEl) {
-  const body = document.getElementById(bodyId);
-  const arrowId = bodyId.replace('body', 'arrow');
-  const arrow = document.getElementById(arrowId);
-  if (body.classList.contains('collapsed')) {
-    body.classList.remove('collapsed');
-    arrow.classList.add('open');
-  } else {
-    body.classList.add('collapsed');
-    arrow.classList.remove('open');
-  }
-}
-
-// Mark step dots interactive
-document.querySelectorAll('.milestone-step').forEach((step, i) => {
-  step.addEventListener('click', () => {
-    document.querySelectorAll('.step-dot').forEach((d, j) => {
-      if (j < i) d.className = 'step-dot done';
-      else if (j === i) d.className = 'step-dot active';
-      else d.className = 'step-dot pending';
-    });
-  });
-});
-
-// Upload zone file name display
-document.querySelectorAll('.upload-zone input[type="file"]').forEach(input => {
-  input.addEventListener('change', function() {
-    const label = this.closest('.upload-zone').querySelector('.upload-label');
-    if (this.files.length > 0) {
-      label.innerHTML = `<strong style="color:#2d6a2d">✓ ${this.files.length} file(s) selected</strong>${Array.from(this.files).map(f => f.name).join(', ')}`;
+  <script>
+    function toggleMilestone(bodyId, headerEl) {
+      const body = document.getElementById(bodyId);
+      const arrowId = bodyId.replace('body', 'arrow');
+      const arrow = document.getElementById(arrowId);
+      if (body.classList.contains('collapsed')) {
+        body.classList.remove('collapsed');
+        arrow.classList.add('open');
+      } else {
+        body.classList.add('collapsed');
+        arrow.classList.remove('open');
+      }
     }
-  });
-});
 
-// Nav scroll
-document.querySelectorAll('a.nav-pill').forEach(link => {
-  link.addEventListener('click', function(e) {
-    document.querySelectorAll('a.nav-pill').forEach(l => l.classList.remove('active'));
-    this.classList.add('active');
-  });
-});
-</script>
+    // Mark step dots interactive
+    document.querySelectorAll('.milestone-step').forEach((step, i) => {
+      step.addEventListener('click', () => {
+        document.querySelectorAll('.step-dot').forEach((d, j) => {
+          if (j < i) d.className = 'step-dot done';
+          else if (j === i) d.className = 'step-dot active';
+          else d.className = 'step-dot pending';
+        });
+      });
+    });
+
+    // Upload zone file name display
+    document.querySelectorAll('.upload-zone input[type="file"]').forEach(input => {
+      input.addEventListener('change', function () {
+        const label = this.closest('.upload-zone').querySelector('.upload-label');
+        if (this.files.length > 0) {
+          label.innerHTML = `<strong style="color:#2d6a2d">✓ ${this.files.length} file(s) selected</strong>${Array.from(this.files).map(f => f.name).join(', ')}`;
+        }
+      });
+    });
+
+    // Nav scroll
+    document.querySelectorAll('a.nav-pill').forEach(link => {
+      link.addEventListener('click', function (e) {
+        document.querySelectorAll('a.nav-pill').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
 </body>
+
 </html>
