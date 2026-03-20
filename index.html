@@ -4,24 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KCSE Agriculture Project Portfolio — 2026
-  </title>
+  <title>KCSE Agriculture Project Portfolio 2026</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
   <style>
+    /* ─── VARIABLES ─── */
     :root {
-      --green-deep: #1a3a1a;
-      --green-mid: #2d6a2d;
-      --green-light: #4caf50;
-      --green-pale: #e8f5e9;
+      --gd: #1a3a1a;
+      --gm: #2d6a2d;
+      --gl: #4caf50;
+      --gp: #e8f5e9;
       --gold: #c8a84b;
-      --gold-light: #f5e6b8;
+      --goldl: #f5e6b8;
       --cream: #fdfaf4;
-      --charcoal: #1c1c1c;
-      --muted: #6b7280;
-      --border: #d4e6d4;
-      --red: #c0392b;
+      --ch: #1c1c1c;
+      --mu: #6b7280;
+      --bd: #d4e6d4;
+      --shadow: 0 4px 24px rgba(0, 0, 0, .08);
     }
 
     * {
@@ -33,95 +33,97 @@
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--cream);
-      color: var(--charcoal);
+      color: var(--ch);
       min-height: 100vh;
     }
 
-    /* ===== HEADER ===== */
-    .site-header {
-      background: var(--green-deep);
-      color: white;
-      padding: 0;
+    /* ─── HEADER ─── */
+    .hdr {
+      background: var(--gd);
       position: sticky;
       top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      z-index: 200;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, .3);
     }
 
-    .header-inner {
+    .hdr-in {
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 24px;
+      padding: 11px 24px;
+      gap: 12px;
     }
 
-    .header-logo {
+    .hdr-logo {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
+      flex-shrink: 0;
     }
 
-    .knec-badge {
-      width: 48px;
-      height: 48px;
+    .knec {
+      width: 46px;
+      height: 46px;
       background: var(--gold);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Playfair Display', serif;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
-      color: var(--green-deep);
-      flex-shrink: 0;
+      color: var(--gd);
     }
 
-    .header-title {
+    .hdr-ttl {
       font-family: 'Playfair Display', serif;
-      font-size: 15px;
+      font-size: 14px;
+      color: #fff;
       line-height: 1.2;
     }
 
-    .header-title small {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
+    .hdr-ttl small {
+      font-size: 10px;
       font-weight: 300;
-      opacity: 0.7;
+      opacity: .65;
       display: block;
+      font-family: 'DM Sans', sans-serif;
     }
 
-    .header-nav {
+    .hdr-nav {
       display: flex;
       gap: 6px;
+      flex-wrap: wrap;
     }
 
-    .nav-pill {
-      padding: 6px 14px;
+    .npill {
+      padding: 5px 13px;
       border-radius: 20px;
-      font-size: 12px;
-      font-weight: 500;
+      font-size: 11px;
+      font-weight: 600;
       cursor: pointer;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(255, 255, 255, .2);
+      color: rgba(255, 255, 255, .8);
       background: transparent;
-      transition: all 0.2s;
+      transition: all .2s;
       text-decoration: none;
+      white-space: nowrap;
     }
 
-    .nav-pill:hover,
-    .nav-pill.active {
+    .npill:hover,
+    .npill.act {
       background: var(--gold);
-      color: var(--green-deep);
+      color: var(--gd);
       border-color: var(--gold);
     }
 
-    /* ===== HERO BANNER ===== */
+    /* ─── HERO ─── */
     .hero {
-      background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-mid) 60%, #3d8b3d 100%);
-      color: white;
-      padding: 60px 24px 40px;
+      background: linear-gradient(135deg, var(--gd) 0%, var(--gm) 60%, #3d8b3d 100%);
+      color: #fff;
+      padding: 52px 24px 36px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -131,37 +133,36 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: radial-gradient(circle at 20% 80%, rgba(200, 168, 75, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(76, 175, 80, 0.2) 0%, transparent 50%);
+      background: radial-gradient(circle at 20% 80%, rgba(200, 168, 75, .18), transparent 50%), radial-gradient(circle at 80% 20%, rgba(76, 175, 80, .22), transparent 50%);
     }
 
-    .hero-content {
+    .hero-in {
       position: relative;
       z-index: 1;
-      max-width: 700px;
+      max-width: 720px;
       margin: 0 auto;
     }
 
-    .hero-tag {
+    .htag {
       display: inline-block;
-      background: rgba(200, 168, 75, 0.25);
+      background: rgba(200, 168, 75, .25);
       border: 1px solid var(--gold);
       color: var(--gold);
       padding: 4px 16px;
       border-radius: 20px;
-      font-size: 11px;
-      font-weight: 600;
+      font-size: 10px;
+      font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(26px, 5vw, 44px);
+      font-size: clamp(24px, 5vw, 42px);
       font-weight: 900;
       line-height: 1.1;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .hero h1 span {
@@ -169,101 +170,271 @@
     }
 
     .hero p {
-      font-size: 15px;
-      opacity: 0.75;
-      margin-bottom: 30px;
+      font-size: 14px;
+      opacity: .72;
+      margin-bottom: 28px;
     }
 
-    /* GROUP INFO CARD */
-    .group-card {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 16px;
-      padding: 24px;
+    .gcard {
+      background: rgba(255, 255, 255, .09);
+      border: 1px solid rgba(255, 255, 255, .15);
+      border-radius: 14px;
+      padding: 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+      gap: 14px;
       text-align: left;
       backdrop-filter: blur(10px);
     }
 
-    .group-field label {
-      font-size: 10px;
+    .gf label {
+      font-size: 9px;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: var(--gold);
-      font-weight: 600;
+      font-weight: 700;
       display: block;
       margin-bottom: 4px;
     }
 
-    .group-field input,
-    .group-field select {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+    .gf input,
+    .gf select {
+      background: rgba(255, 255, 255, .11);
+      border: 1px solid rgba(255, 255, 255, .2);
       border-radius: 8px;
-      padding: 8px 12px;
-      color: white;
+      padding: 8px 11px;
+      color: #fff;
       font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
+      font-size: 13px;
       width: 100%;
       outline: none;
+      transition: border-color .2s;
     }
 
-    .group-field input::placeholder {
-      color: rgba(255, 255, 255, 0.4);
-    }
-
-    .group-field input:focus {
+    .gf input:focus,
+    .gf select:focus {
       border-color: var(--gold);
     }
 
-    /* ===== MAIN LAYOUT ===== */
-    .main-wrap {
+    .gf input::placeholder {
+      color: rgba(255, 255, 255, .38);
+    }
+
+    .gf select option {
+      color: #000;
+      background: #fff;
+    }
+
+    /* ─── MAIN ─── */
+    .main {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 32px 24px 60px;
+      padding: 30px 22px 70px;
     }
 
-    /* ===== PROGRESS TRACKER ===== */
-    .progress-section {
-      margin-bottom: 40px;
+    /* ─── PRINT PANEL ─── */
+    .pp {
+      background: #fff;
+      border: 2px solid var(--gold);
+      border-radius: 18px;
+      padding: 26px 30px;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 32px rgba(200, 168, 75, .13);
+      position: relative;
+      overflow: hidden;
     }
 
-    .section-label {
-      font-size: 11px;
+    .pp::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gd), var(--gold), var(--gd));
+    }
+
+    .pp-lbl {
+      font-size: 9px;
       text-transform: uppercase;
       letter-spacing: 2px;
       color: var(--gold);
-      font-weight: 600;
-      margin-bottom: 8px;
+      font-weight: 700;
+      margin-bottom: 5px;
     }
 
-    .section-title {
+    .pp h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      color: var(--green-deep);
+      font-size: 20px;
+      color: var(--gd);
+      margin-bottom: 5px;
+    }
+
+    .pp p {
+      font-size: 12px;
+      color: var(--mu);
+      line-height: 1.5;
       margin-bottom: 20px;
     }
 
-    .timeline {
+    .opts {
       display: flex;
-      gap: 0;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .opt {
+      border: 2px solid var(--bd);
+      border-radius: 14px;
+      padding: 14px 18px;
+      cursor: pointer;
+      transition: all .22s;
+      text-align: center;
+      min-width: 120px;
+      background: #fff;
+      position: relative;
+      user-select: none;
+    }
+
+    .opt:hover {
+      border-color: var(--gl);
+      background: var(--gp);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .opt.sel {
+      border-color: var(--gold);
+      background: var(--goldl);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(200, 168, 75, .25);
+    }
+
+    .opt.sel::after {
+      content: '✓';
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 20px;
+      height: 20px;
+      background: var(--gold);
+      border-radius: 50%;
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--gd);
+      line-height: 20px;
+      text-align: center;
+    }
+
+    .oi {
+      font-size: 28px;
+      margin-bottom: 6px;
+    }
+
+    .ol {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gd);
+      display: block;
+    }
+
+    .os {
+      font-size: 9px;
+      color: var(--mu);
+      margin-top: 2px;
+      display: block;
+    }
+
+    .acts {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 13px 26px;
+      border: none;
+      border-radius: 11px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      transition: all .2s;
+      white-space: nowrap;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--gd);
+      box-shadow: 0 2px 14px rgba(200, 168, 75, .3);
+    }
+
+    .btn-gold:hover {
+      background: #b8941e;
+      transform: translateY(-1px);
+    }
+
+    .btn-dark {
+      background: var(--gd);
+      color: #fff;
+      box-shadow: 0 2px 14px rgba(26, 58, 26, .3);
+    }
+
+    .btn-dark:hover {
+      background: var(--gm);
+      transform: translateY(-1px);
+    }
+
+    .bhint {
+      font-size: 11px;
+      color: var(--mu);
+      max-width: 240px;
+      line-height: 1.6;
+    }
+
+    /* ─── TIMELINE ─── */
+    .tl-sec {
+      margin-bottom: 36px;
+    }
+
+    .sec-lbl {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .sec-ttl {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: var(--gd);
+      margin-bottom: 18px;
+    }
+
+    .tl {
+      display: flex;
       position: relative;
     }
 
-    .timeline::before {
+    .tl::before {
       content: '';
       position: absolute;
-      top: 22px;
+      top: 21px;
       left: 22px;
       right: 22px;
       height: 2px;
-      background: var(--border);
+      background: var(--bd);
       z-index: 0;
     }
 
-    .milestone-step {
+    .tl-step {
       flex: 1;
       text-align: center;
       position: relative;
@@ -271,335 +442,93 @@
       cursor: pointer;
     }
 
-    .step-dot {
-      width: 44px;
-      height: 44px;
+    .dot {
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 8px;
-      font-size: 13px;
+      margin: 0 auto 7px;
+      font-size: 12px;
       font-weight: 700;
-      transition: all 0.3s;
-      border: 2px solid var(--border);
-      background: white;
-      color: var(--muted);
+      transition: all .3s;
+      border: 2px solid var(--bd);
+      background: #fff;
+      color: var(--mu);
     }
 
-    .step-dot.done {
-      background: var(--green-light);
-      border-color: var(--green-light);
-      color: white;
+    .dot.done {
+      background: var(--gl);
+      border-color: var(--gl);
+      color: #fff;
     }
 
-    .step-dot.active {
-      background: var(--green-deep);
-      border-color: var(--green-deep);
+    .dot.active {
+      background: var(--gd);
+      border-color: var(--gd);
       color: var(--gold);
     }
 
-    .step-dot.pending {
-      background: white;
-      border-color: var(--border);
-      color: var(--muted);
-    }
-
-    .step-label {
-      font-size: 11px;
+    .tl-lbl {
+      font-size: 10px;
       font-weight: 500;
-      color: var(--muted);
+      color: var(--mu);
       line-height: 1.3;
     }
 
-    .step-date {
-      font-size: 10px;
+    .tl-date {
+      font-size: 9px;
       color: var(--gold);
       margin-top: 2px;
     }
 
-    /* ===== MILESTONE PANELS ===== */
-    .milestones-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
+    /* ─── POSTER ─── */
+    .poster-sec {
+      background: #fff;
+      border-radius: 18px;
+      border: 2px solid var(--gold);
+      padding: 28px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow);
     }
 
-    .milestone-panel {
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-      border: 1px solid var(--border);
-      transition: box-shadow 0.3s;
-    }
-
-    .milestone-panel:hover {
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    }
-
-    .milestone-header {
-      padding: 20px 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .milestone-header.m1 {
-      background: linear-gradient(90deg, #e8f5e9, #f1f8e9);
-      border-bottom: 1px solid #c8e6c9;
-    }
-
-    .milestone-header.m2 {
-      background: linear-gradient(90deg, #fff8e1, #fffde7);
-      border-bottom: 1px solid #ffe082;
-    }
-
-    .milestone-badge {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .badge-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-    }
-
-    .m1 .badge-icon {
-      background: var(--green-pale);
-    }
-
-    .m2 .badge-icon {
-      background: var(--gold-light);
-    }
-
-    .milestone-meta h3 {
+    .poster-sec h3 {
       font-family: 'Playfair Display', serif;
       font-size: 18px;
-      color: var(--green-deep);
-    }
-
-    .milestone-meta p {
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 2px;
-    }
-
-    .deadline-chip {
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 11px;
-      font-weight: 600;
-    }
-
-    .m1 .deadline-chip {
-      background: #c8e6c9;
-      color: #2e7d32;
-    }
-
-    .m2 .deadline-chip {
-      background: #ffe082;
-      color: #e65100;
-    }
-
-    .milestone-body {
-      padding: 0;
-      display: block;
-    }
-
-    .milestone-body.collapsed {
-      display: none;
-    }
-
-    /* ACTIVITY CARDS */
-    .activities-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1px;
-      background: var(--border);
-    }
-
-    .activity-card {
-      background: white;
-      padding: 24px 28px;
-    }
-
-    .activity-month {
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--green-light);
-      margin-bottom: 8px;
-    }
-
-    .activity-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 16px;
-      color: var(--green-deep);
-      margin-bottom: 12px;
-    }
-
-    /* UPLOAD ZONES */
-    .upload-zone {
-      border: 2px dashed var(--border);
-      border-radius: 12px;
-      padding: 16px;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.2s;
-      margin-bottom: 12px;
-      position: relative;
-    }
-
-    .upload-zone:hover {
-      border-color: var(--green-light);
-      background: var(--green-pale);
-    }
-
-    .upload-zone input[type="file"] {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      cursor: pointer;
-      width: 100%;
-      height: 100%;
-    }
-
-    .upload-icon {
-      font-size: 24px;
+      color: var(--gd);
       margin-bottom: 4px;
     }
 
-    .upload-label {
+    .poster-sec p {
       font-size: 12px;
-      color: var(--muted);
+      color: var(--mu);
+      margin-bottom: 16px;
     }
 
-    .upload-label strong {
-      color: var(--green-mid);
-      display: block;
-      font-size: 13px;
-      margin-bottom: 2px;
-    }
-
-    /* TEXT AREAS */
-    .field-group {
-      margin-bottom: 14px;
-    }
-
-    .field-group label {
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--muted);
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    .field-group textarea,
-    .field-group input[type="text"] {
-      width: 100%;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 10px 14px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13px;
-      color: var(--charcoal);
-      resize: vertical;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .field-group textarea:focus,
-    .field-group input:focus {
-      border-color: var(--green-light);
-    }
-
-    .field-group textarea {
-      min-height: 80px;
-    }
-
-    /* STATUS BADGES */
-    .status-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 12px;
-    }
-
-    .status-select {
-      padding: 6px 12px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      font-size: 12px;
-      font-family: 'DM Sans', sans-serif;
-      outline: none;
-      cursor: pointer;
-      background: white;
-    }
-
-    .save-btn {
-      padding: 7px 18px;
-      background: var(--green-deep);
-      color: white;
-      border: none;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .save-btn:hover {
-      background: var(--green-mid);
-    }
-
-    /* MEMBERS TABLE */
-    .members-section {
-      padding: 28px;
-      border-top: 1px solid var(--border);
-    }
-
-    .members-section h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 16px;
-      color: var(--green-deep);
-      margin-bottom: 14px;
-    }
-
-    .members-table {
+    .mtbl {
       width: 100%;
       border-collapse: collapse;
       font-size: 13px;
     }
 
-    .members-table th {
+    .mtbl th {
       text-align: left;
-      padding: 8px 12px;
-      background: var(--green-pale);
-      color: var(--green-deep);
-      font-size: 11px;
+      padding: 8px 11px;
+      background: var(--gp);
+      color: var(--gd);
+      font-size: 10px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: .8px;
     }
 
-    .members-table td {
-      padding: 8px 12px;
-      border-bottom: 1px solid var(--border);
+    .mtbl td {
+      padding: 7px 11px;
+      border-bottom: 1px solid var(--bd);
     }
 
-    .members-table td input {
+    .mtbl td input {
       width: 100%;
       border: none;
       outline: none;
@@ -608,142 +537,474 @@
       background: transparent;
     }
 
-    /* ===== POSTER SECTION ===== */
-    .poster-section {
-      background: white;
-      border-radius: 20px;
-      border: 2px solid var(--gold);
-      padding: 32px;
-      margin-bottom: 24px;
-      box-shadow: 0 4px 24px rgba(200, 168, 75, 0.1);
+    /* ─── MILESTONES ─── */
+    .ms-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
     }
 
-    .poster-section h3 {
+    .ms-panel {
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--bd);
+    }
+
+    .ms-hdr {
+      padding: 18px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .ms-hdr.m1 {
+      background: linear-gradient(90deg, #e8f5e9, #f1f8e9);
+      border-bottom: 1px solid #c8e6c9;
+    }
+
+    .ms-hdr.m2 {
+      background: linear-gradient(90deg, #fff8e1, #fffde7);
+      border-bottom: 1px solid #ffe082;
+    }
+
+    .ms-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .bi {
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+    }
+
+    .m1 .bi {
+      background: var(--gp);
+    }
+
+    .m2 .bi {
+      background: var(--goldl);
+    }
+
+    .ms-meta h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      color: var(--gd);
+    }
+
+    .ms-meta p {
+      font-size: 11px;
+      color: var(--mu);
+      margin-top: 1px;
+    }
+
+    .dchip {
+      padding: 5px 13px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .m1 .dchip {
+      background: #c8e6c9;
+      color: #2e7d32;
+    }
+
+    .m2 .dchip {
+      background: #ffe082;
+      color: #e65100;
+    }
+
+    .ms-body {
+      display: block;
+    }
+
+    .ms-body.col {
+      display: none;
+    }
+
+    .ag {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1px;
+      background: var(--bd);
+    }
+
+    .ac {
+      background: #fff;
+      padding: 22px 26px;
+    }
+
+    .amon {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gl);
+      margin-bottom: 7px;
+    }
+
+    .attl {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      color: var(--gd);
+      margin-bottom: 11px;
+    }
+
+    .fgrp {
+      margin-bottom: 13px;
+    }
+
+    .fgrp label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: var(--mu);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .fgrp textarea,
+    .fgrp input[type=text] {
+      width: 100%;
+      border: 1px solid var(--bd);
+      border-radius: 9px;
+      padding: 9px 13px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      color: var(--ch);
+      resize: vertical;
+      outline: none;
+      transition: border-color .2s;
+    }
+
+    .fgrp textarea:focus,
+    .fgrp input[type=text]:focus {
+      border-color: var(--gl);
+    }
+
+    .fgrp textarea {
+      min-height: 76px;
+    }
+
+    .uz {
+      border: 2px dashed var(--bd);
+      border-radius: 11px;
+      padding: 14px;
+      text-align: center;
+      cursor: pointer;
+      transition: all .2s;
+      margin-bottom: 11px;
+      position: relative;
+    }
+
+    .uz:hover {
+      border-color: var(--gl);
+      background: var(--gp);
+    }
+
+    .uz input[type=file] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+
+    .ui {
+      font-size: 22px;
+      margin-bottom: 3px;
+    }
+
+    .ul-txt {
+      font-size: 11px;
+      color: var(--mu);
+    }
+
+    .ul-txt strong {
+      color: var(--gm);
+      display: block;
+      font-size: 12px;
+      margin-bottom: 1px;
+    }
+
+    .sr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 11px;
+      gap: 8px;
+    }
+
+    .ssel {
+      padding: 6px 11px;
+      border-radius: 20px;
+      border: 1px solid var(--bd);
+      font-size: 11px;
+      font-family: 'DM Sans', sans-serif;
+      outline: none;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .sbtn {
+      padding: 8px 18px;
+      background: var(--gd);
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .2s;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .sbtn:hover {
+      background: var(--gm);
+    }
+
+    .sbtn.saved {
+      background: var(--gl);
+    }
+
+    /* ─── SUBMISSION ─── */
+    .sub-panel {
+      background: var(--gd);
+      color: #fff;
+      border-radius: 18px;
+      padding: 30px;
+      margin-top: 28px;
+    }
+
+    .sub-panel h3 {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      color: var(--green-deep);
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
-    .poster-section p {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 20px;
+    .sub-panel>p {
+      font-size: 12px;
+      opacity: .7;
+      margin-bottom: 22px;
     }
 
-    .poster-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-    }
-
-    /* ===== SUBMISSION PANEL ===== */
-    .submission-panel {
-      background: var(--green-deep);
-      color: white;
-      border-radius: 20px;
-      padding: 32px;
-    }
-
-    .submission-panel h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      margin-bottom: 6px;
-    }
-
-    .submission-panel p {
-      font-size: 13px;
-      opacity: 0.7;
-      margin-bottom: 24px;
-    }
-
-    .deadline-cards {
+    .dcards {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 24px;
+      gap: 14px;
+      margin-bottom: 22px;
     }
 
-    .deadline-card {
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 14px;
-      padding: 18px;
+    .dc {
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 12px;
+      padding: 16px;
     }
 
-    .deadline-card .d-tag {
-      font-size: 10px;
+    .dc .dt {
+      font-size: 9px;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: var(--gold);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
-    .deadline-card .d-date {
-      font-size: 18px;
+    .dc .dd {
+      font-size: 17px;
       font-weight: 700;
     }
 
-    .deadline-card .d-desc {
-      font-size: 12px;
-      opacity: 0.6;
+    .dc .ds {
+      font-size: 11px;
+      opacity: .6;
       margin-top: 2px;
     }
 
-    .submit-btn {
+    .subbtn {
       width: 100%;
-      padding: 14px;
+      padding: 13px;
       background: var(--gold);
-      color: var(--green-deep);
+      color: var(--gd);
       border: none;
-      border-radius: 12px;
+      border-radius: 11px;
       font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 700;
       cursor: pointer;
-      transition: opacity 0.2s;
     }
 
-    .submit-btn:hover {
-      opacity: 0.9;
+    .subbtn:hover {
+      opacity: .9;
     }
 
-    /* ===== EXPAND TOGGLE ===== */
-    .toggle-arrow {
-      font-size: 20px;
-      transition: transform 0.3s;
+    .arr {
+      font-size: 19px;
+      transition: transform .3s;
     }
 
-    .toggle-arrow.open {
+    .arr.open {
       transform: rotate(180deg);
     }
 
-    /* ===== PRINT ===== */
-    @media print {
+    /* ─── TOAST ─── */
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: var(--gd);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 11px;
+      font-size: 12px;
+      font-weight: 600;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .22);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      transform: translateY(80px);
+      opacity: 0;
+      transition: all .35s cubic-bezier(.34, 1.56, .64, 1);
+      pointer-events: none;
+    }
 
-      .site-header,
-      .submit-btn,
-      .save-btn {
-        display: none;
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* ─── MODAL ─── */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, .55);
+      backdrop-filter: blur(5px);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    .mbox {
+      background: #fff;
+      border-radius: 18px;
+      padding: 38px;
+      max-width: 440px;
+      width: 92%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .28);
+      animation: mi .3s ease;
+    }
+
+    @keyframes mi {
+      from {
+        opacity: 0;
+        transform: scale(.9) translateY(18px)
       }
 
-      .milestone-body.collapsed {
-        display: block !important;
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0)
       }
     }
 
-    @media (max-width: 600px) {
-      .header-nav {
+    .mico {
+      font-size: 50px;
+      margin-bottom: 12px;
+    }
+
+    .mbox h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      color: var(--gd);
+      margin-bottom: 8px;
+    }
+
+    .mbox p {
+      font-size: 13px;
+      color: var(--mu);
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    .mbtns {
+      display: flex;
+      gap: 11px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .mbtn {
+      padding: 12px 22px;
+      border-radius: 11px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: all .2s;
+    }
+
+    .mbtn.p {
+      background: var(--gd);
+      color: #fff;
+    }
+
+    .mbtn.p:hover {
+      background: var(--gm);
+    }
+
+    .mbtn.o {
+      background: #fff;
+      color: var(--mu);
+      border: 1px solid var(--bd);
+    }
+
+    .mbtn.o:hover {
+      background: var(--gp);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media(max-width:620px) {
+      .hdr-nav {
         display: none;
       }
 
-      .timeline {
+      .tl {
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 8px;
       }
 
-      .deadline-cards {
+      .dcards {
         grid-template-columns: 1fr;
+      }
+
+      .opts {
+        flex-direction: column;
+      }
+
+      .acts {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
@@ -751,519 +1012,802 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="header-logo">
-        <div class="knec-badge">KNEC</div>
-        <div class="header-title">
-          Agriculture Project Portfolio
-          <small>KCSE 2026 · Paper 443/3</small>
-        </div>
+  <!-- TOAST -->
+  <div class="toast" id="toast">✅ Saved!</div>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="mbox">
+      <div class="mico">🖨️</div>
+      <h3 id="mTitle">Form Ready!</h3>
+      <p id="mDesc">Your printable A4 form will open in a new tab. Press <strong>Ctrl + P</strong> (Windows) or
+        <strong>Cmd + P</strong> (Mac) to print it, or select <strong>Save as PDF</strong> in the print dialog to
+        download it.
+      </p>
+      <div class="mbtns">
+        <button class="mbtn p" id="openPrintBtn">🖨️ Open &amp; Print / Save PDF</button>
+        <button class="mbtn o" onclick="closeModal()">✕ Cancel</button>
       </div>
-      <nav class="header-nav">
-        <a href="#milestone1" class="nav-pill active">Milestone I</a>
-        <a href="#milestone2" class="nav-pill">Milestone II</a>
-        <a href="#submission" class="nav-pill">Submit</a>
+    </div>
+  </div>
+
+  <!-- ══════════════ HEADER ══════════════ -->
+  <header class="hdr">
+    <div class="hdr-in">
+      <div class="hdr-logo">
+        <div class="knec">KNEC</div>
+        <div class="hdr-ttl">Agriculture Project Portfolio<small>KCSE 2026 · Paper 443/3</small></div>
+      </div>
+      <nav class="hdr-nav">
+        <a href="#pp" class="npill act">📥 Print Forms</a>
+        <a href="#m1panel" class="npill">Milestone I</a>
+        <a href="#m2panel" class="npill">Milestone II</a>
+        <a href="#sub" class="npill">Submit</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- ══════════════ HERO ══════════════ -->
   <section class="hero">
-    <div class="hero-content">
-      <div class="hero-tag">Smacqx Tech Electronic Project Portfolio 2026</div>
-      <h1>KCSE Agriculture <span>By Teacher Kibet Solosma (Tel:+25478309458)</span></h1>
+    <div class="hero-in">
+      <div class="htag">Smacqx Tech Electronic Project Portfolio</div>
+      <h1>KCSE Agriculture <span>Project by Teacher Kibet Solosma Tel +254783809458</span></h1>
       <p>Sustainable Livestock Rearing Enterprise · January – July 2026</p>
-      <div class="group-card">
-        <div class="group-field">
-          <label>School Name</label>
-          <input type="text" placeholder="e.g. Nairobi High School">
-        </div>
-        <div class="group-field">
-          <label>Group Number</label>
-          <input type="text" placeholder="e.g. Group 3">
-        </div>
-        <div class="group-field">
-          <label>Livestock Enterprise</label>
-          <select>
-            <option value="">Select enterprise…</option>
-            <option value="chicken" selected>Chicken (2 per group)</option>
-            <option value="rabbits">Rabbits (2 per group)</option>
-            <option value="pigs">Pigs (2 per group)</option>
-            <option value="goats">Goats/Sheep (1 per group)</option>
+      <div class="gcard">
+        <div class="gf"><label>School Name</label><input type="text" id="f_school"
+            placeholder="e.g. Nairobi High School"></div>
+        <div class="gf"><label>Group Number</label><input type="text" id="f_group" placeholder="e.g. Group 3"></div>
+        <div class="gf">
+          <label>Enterprise</label>
+          <select id="f_ent">
+            <option>Chicken Rearing (2 per group)</option>
+            <option>Rabbit Rearing (2 per group)</option>
+            <option>Pig Rearing (2 per group)</option>
+            <option>Goat/Sheep Rearing (1 per group)</option>
           </select>
         </div>
-        <div class="group-field">
-          <label>Agriculture Teacher</label>
-          <input type="text" placeholder="Full Name">
+        <div class="gf"><label>Agriculture Teacher</label><input type="text" id="f_teacher" placeholder="Full Name">
         </div>
       </div>
     </div>
   </section>
 
-  <div class="main-wrap">
+  <div class="main">
 
-    <!-- PROGRESS TIMELINE -->
-    <div class="progress-section">
-      <div class="section-label">Project Timeline</div>
-      <div class="section-title">Progress Overview</div>
-      <div class="timeline">
-        <div class="milestone-step">
-          <div class="step-dot done">✓</div>
-          <div class="step-label">January<br>Locality Analysis</div>
-          <div class="step-date">M1</div>
+    <!-- ══════════════ PRINT PANEL ══════════════ -->
+    <div class="pp" id="pp">
+      <div class="pp-lbl">📥 Generate Printable Forms</div>
+      <h3>Select a Milestone &amp; Download / Print for Manual Filling</h3>
+      <p>Select what you need below → click <strong>Generate &amp; Print</strong> → a clean A4 form opens in a new tab →
+        press <strong>Ctrl+P</strong> to print, or choose <strong>Save as PDF</strong> to download. Your saved data will
+        be pre-filled on the form.</p>
+
+      <div class="opts">
+        <div class="opt sel" id="opt-m1" onclick="selOpt('m1')">
+          <div class="oi">🌱</div><span class="ol">Milestone I</span><span class="os">Jan · Feb · Mar 2026</span>
         </div>
-        <div class="milestone-step">
-          <div class="step-dot done">✓</div>
-          <div class="step-label">February<br>Solution Design</div>
-          <div class="step-date">M1</div>
+        <div class="opt" id="opt-m2" onclick="selOpt('m2')">
+          <div class="oi">🐔</div><span class="ol">Milestone II</span><span class="os">Apr · May · Jun · Jul 2026</span>
         </div>
-        <div class="milestone-step">
-          <div class="step-dot active">3</div>
-          <div class="step-label">March<br>Infrastructure</div>
-          <div class="step-date">Upload 31 Mar</div>
+        <div class="opt" id="opt-both" onclick="selOpt('both')">
+          <div class="oi">📋</div><span class="ol">Both Milestones</span><span class="os">Complete Portfolio Pack</span>
         </div>
-        <div class="milestone-step">
-          <div class="step-dot pending">4</div>
-          <div class="step-label">Apr–May<br>Rearing</div>
-          <div class="step-date">M2</div>
+        <div class="opt" id="opt-poster" onclick="selOpt('poster')">
+          <div class="oi">🪪</div><span class="ol">Group Poster</span><span class="os">KNEC ID Sheet §2.3</span>
         </div>
-        <div class="milestone-step">
-          <div class="step-dot pending">5</div>
-          <div class="step-label">June<br>Value Addition</div>
-          <div class="step-date">M2</div>
+      </div>
+
+      <div class="acts">
+        <button class="btn btn-gold" onclick="genPrint()">🖨️ Generate &amp; Print Selected</button>
+        <button class="btn btn-dark" onclick="selOpt('both');genPrint()">📄 Print Full Portfolio</button>
+        <span class="bhint">💡 Choose <strong>Save as PDF</strong> in the print dialog to download a PDF file instead of
+          printing on paper.</span>
+      </div>
+    </div>
+
+    <!-- ══════════════ TIMELINE ══════════════ -->
+    <div class="tl-sec">
+      <div class="sec-lbl">Project Timeline</div>
+      <div class="sec-ttl">Progress Overview</div>
+      <div class="tl">
+        <div class="tl-step" onclick="setDot(0)">
+          <div class="dot done" id="d0">✓</div>
+          <div class="tl-lbl">January<br>Locality Analysis</div>
+          <div class="tl-date">M1</div>
         </div>
-        <div class="milestone-step">
-          <div class="step-dot pending">6</div>
-          <div class="step-label">July<br>Sales & Report</div>
-          <div class="step-date">Upload 31 Jul</div>
+        <div class="tl-step" onclick="setDot(1)">
+          <div class="dot done" id="d1">✓</div>
+          <div class="tl-lbl">February<br>Solution Design</div>
+          <div class="tl-date">M1</div>
+        </div>
+        <div class="tl-step" onclick="setDot(2)">
+          <div class="dot active" id="d2">3</div>
+          <div class="tl-lbl">March<br>Infrastructure</div>
+          <div class="tl-date">Upload 31 Mar</div>
+        </div>
+        <div class="tl-step" onclick="setDot(3)">
+          <div class="dot" id="d3">4</div>
+          <div class="tl-lbl">Apr–May<br>Rearing</div>
+          <div class="tl-date">M2</div>
+        </div>
+        <div class="tl-step" onclick="setDot(4)">
+          <div class="dot" id="d4">5</div>
+          <div class="tl-lbl">June<br>Value Addition</div>
+          <div class="tl-date">M2</div>
+        </div>
+        <div class="tl-step" onclick="setDot(5)">
+          <div class="dot" id="d5">6</div>
+          <div class="tl-lbl">July<br>Sales &amp; Report</div>
+          <div class="tl-date">Upload 31 Jul</div>
         </div>
       </div>
     </div>
 
-    <!-- GROUP POSTER -->
-    <div class="poster-section">
-      <div class="section-label">Project Identification</div>
+    <!-- ══════════════ GROUP POSTER ══════════════ -->
+    <div class="poster-sec">
+      <div class="sec-lbl">Project Identification</div>
       <h3>Group Poster Details</h3>
-      <p>As required by KNEC (Section 2.3) — fill in all member details below. This forms the official group
-        identification poster.</p>
-      <div class="members-section" style="padding: 0;">
-        <table class="members-table">
-          <thead>
-            <tr>
-              <th style="width:40px">#</th>
-              <th>Full Name</th>
-              <th>Index Number</th>
-              <th>Role / Part Presented</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td><input type="text" placeholder="Member 1 name"></td>
-              <td><input type="text" placeholder="Index No."></td>
-              <td><input type="text" placeholder="e.g. Locality Analysis"></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td><input type="text" placeholder="Member 2 name"></td>
-              <td><input type="text" placeholder="Index No."></td>
-              <td><input type="text" placeholder="e.g. Market Research"></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td><input type="text" placeholder="Member 3 name"></td>
-              <td><input type="text" placeholder="Index No."></td>
-              <td><input type="text" placeholder="e.g. Infrastructure"></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td><input type="text" placeholder="Member 4 name"></td>
-              <td><input type="text" placeholder="Index No."></td>
-              <td><input type="text" placeholder="e.g. Value Addition"></td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td><input type="text" placeholder="Member 5 name"></td>
-              <td><input type="text" placeholder="Index No."></td>
-              <td><input type="text" placeholder="e.g. Marketing & Sales"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <p>Fill in all Student details below — they auto-save and will appear on the printed Group Poster (KNEC §2.3).</p>
+      <table class="mtbl">
+        <thead>
+          <tr>
+            <th style="width:36px">#</th>
+            <th>Full Name</th>
+            <th>Index Number</th>
+            <th>Role / Part Presented</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><input type="text" class="mn" data-i="0" placeholder="Student 1 full name"></td>
+            <td><input type="text" class="mi" data-i="0" placeholder="Index No."></td>
+            <td><input type="text" class="mr" data-i="0" placeholder="e.g. Leader"></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><input type="text" class="mn" data-i="1" placeholder="Student 2 full name"></td>
+            <td><input type="text" class="mi" data-i="1" placeholder="Index No."></td>
+            <td><input type="text" class="mr" data-i="1" placeholder="e.g. Secretary"></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><input type="text" class="mn" data-i="2" placeholder="Student 3 full name"></td>
+            <td><input type="text" class="mi" data-i="2" placeholder="Index No."></td>
+            <td><input type="text" class="mr" data-i="2" placeholder="e.g. Organizer"></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><input type="text" class="mn" data-i="3" placeholder="Student 4 full name"></td>
+            <td><input type="text" class="mi" data-i="3" placeholder="Index No."></td>
+            <td><input type="text" class="mr" data-i="3" placeholder="e.g. Treasurer"></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><input type="text" class="mn" data-i="4" placeholder="Student 5 full name"></td>
+            <td><input type="text" class="mi" data-i="4" placeholder="Index No."></td>
+            <td><input type="text" class="mr" data-i="4" placeholder="e.g. Marketing &amp; Sales"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <!-- MILESTONE I -->
-    <div class="milestones-grid">
-      <div class="milestone-panel" id="milestone1">
-        <div class="milestone-header m1" onclick="toggleMilestone('m1body', this)">
-          <div class="milestone-badge">
-            <div class="badge-icon">🌱</div>
-            <div class="milestone-meta">
-              <h3>Milestone I — Planning & Setup</h3>
+    <!-- ══════════════ MILESTONES ══════════════ -->
+    <div class="ms-grid">
+
+      <!-- MILESTONE I -->
+      <div class="ms-panel" id="m1panel">
+        <div class="ms-hdr m1" onclick="togMS('m1b','m1a')">
+          <div class="ms-badge">
+            <div class="bi">🌱</div>
+            <div class="ms-meta">
+              <h3>Milestone I — Planning &amp; Setup</h3>
               <p>January · February · March 2026</p>
             </div>
           </div>
-          <div style="display:flex; align-items:center; gap:12px;">
-            <div class="deadline-chip">Upload by 31st March 2026</div>
-            <span class="toggle-arrow open" id="m1arrow">▾</span>
+          <div style="display:flex;align-items:center;gap:11px;">
+            <div class="dchip">Upload by 31st April 2026</div><span class="arr open" id="m1a">▾</span>
           </div>
         </div>
-
-        <div class="milestone-body" id="m1body">
-          <div class="activities-grid">
+        <div class="ms-body" id="m1b">
+          <div class="ag">
 
             <!-- JANUARY -->
-            <div class="activity-card">
-              <div class="activity-month">📍 January — Locality Analysis & Problem Identification</div>
-              <div class="activity-title">Resource Mapping & Market Survey</div>
-              <div class="field-group">
-                <label>Available Resources (land, water, feed)</label>
-                <textarea placeholder="Describe resources available in your school locality…"></textarea>
+            <div class="ac">
+              <div class="amon">📍 January — Locality Analysis &amp; Problem Identification</div>
+              <div class="attl">Resource Mapping &amp; Market Survey</div>
+              <div class="fgrp"><label>Available Resources (land, water, feed)</label><textarea id="jan_res"
+                  placeholder="Describe all resources available in your school locality — land size, water sources, feed availability, labour…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Challenges Identified</label>
-                <textarea
-                  placeholder="e.g. high feed costs, water scarcity, disease outbreaks, market price fluctuations…"></textarea>
+              <div class="fgrp"><label>Challenges Identified</label><textarea id="jan_ch"
+                  placeholder="e.g. high feed costs, water scarcity, disease outbreaks, market price fluctuations, climate change effects…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Popular Livestock Products in the Area</label>
-                <textarea placeholder="List the key products demanded by consumers…"></textarea>
+              <div class="fgrp"><label>Popular Livestock Products &amp; Target Customers</label><textarea id="jan_mkt"
+                  placeholder="Key products demanded locally. Target segments: households, restaurants, schools, retailers. Competitor gaps…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Target Customers Identified</label>
-                <textarea placeholder="e.g. households, restaurants, schools, retailers…"></textarea>
+              <div class="fgrp"><label>Demand Forecast Summary</label><textarea id="jan_dem"
+                  placeholder="Estimate demand based on population growth, income levels, dietary trends. Note seasonal variations…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Demand Forecast Summary</label>
-                <textarea placeholder="Estimate based on population growth, income, dietary trends…"></textarea>
+              <div class="uz"><input type="file" accept="video/*,image/*">
+                <div class="ui">🎥</div>
+                <div class="ul-txt"><strong>Individual Presentation Video</strong>Upload recording of your individual
+                  presentation to the group</div>
               </div>
-              <div class="upload-zone">
-                <input type="file" accept="video/*,image/*,.pdf">
-                <div class="upload-icon">🎥</div>
-                <div class="upload-label"><strong>Individual Presentation Video</strong>Upload recording of group
-                  presentation</div>
-              </div>
-              <div class="status-row">
-                <select class="status-select">
-                  <option>⬜ Not Started</option>
-                  <option>🟡 In Progress</option>
-                  <option>🟢 Complete</option>
+              <div class="sr">
+                <select class="ssel" id="jan_st">
+                  <option value="ns">⬜ Not Started</option>
+                  <option value="ip">🟡 In Progress</option>
+                  <option value="done">🟢 Complete</option>
                 </select>
-                <button class="save-btn">Save Entry</button>
+                <button class="sbtn" onclick="saveCard('jan',['jan_res','jan_ch','jan_mkt','jan_dem','jan_st'],this)">💾
+                  Save Entry</button>
               </div>
             </div>
 
             <!-- FEBRUARY -->
-            <div class="activity-card">
-              <div class="activity-month">📋 February — Solution Design & Project Proposal</div>
-              <div class="activity-title">Enterprise Selection & Proposal</div>
-              <div class="field-group">
-                <label>Enterprises Compared</label>
-                <textarea placeholder="List all enterprises analysed with their pros and cons…"></textarea>
+            <div class="ac">
+              <div class="amon">📋 February — Solution Design &amp; Project Proposal</div>
+              <div class="attl">Enterprise Selection &amp; Group Proposal</div>
+              <div class="fgrp"><label>Enterprises Compared &amp; Selected Enterprise + Justification</label><textarea
+                  id="feb_comp"
+                  placeholder="List all enterprises analysed. State selected enterprise and explain WHY — profitability, resources required, market demand, environmental impact, sustainability…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Selected Enterprise & Justification</label>
-                <textarea
-                  placeholder="State the chosen enterprise and explain WHY it was selected (profitability, resources, market demand, sustainability)…"></textarea>
+              <div class="fgrp"><label>Project Aims, Key Phases &amp; Duration</label><textarea id="feb_aims"
+                  placeholder="State what the project aims to achieve. Outline key phases and their expected duration…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Project Aims & Objectives</label>
-                <textarea placeholder="What does the project aim to achieve?"></textarea>
+              <div class="fgrp"><label>Inputs Required &amp; Long-term Viability Plan</label><textarea id="feb_inp"
+                  placeholder="Capital, equipment, labour needed. How the project will remain viable in the long term…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Key Phases & Duration</label>
-                <textarea placeholder="Outline the phases and their expected duration…"></textarea>
+              <div class="uz"><input type="file" accept="video/*,.pdf,.pptx">
+                <div class="ui">🎥</div>
+                <div class="ul-txt"><strong>Group Class Presentation Video</strong>Upload recording of group
+                  presentation to the class</div>
               </div>
-              <div class="field-group">
-                <label>Inputs Required (capital, equipment, labour)</label>
-                <textarea placeholder="List all inputs needed…"></textarea>
-              </div>
-              <div class="field-group">
-                <label>Long-term Viability Plan</label>
-                <textarea placeholder="How will the project remain viable?"></textarea>
-              </div>
-              <div class="upload-zone">
-                <input type="file" accept="video/*,.pdf,.pptx">
-                <div class="upload-icon">🎥</div>
-                <div class="upload-label"><strong>Group Class Presentation Video</strong>Upload recording of class
-                  presentation</div>
-              </div>
-              <div class="status-row">
-                <select class="status-select">
-                  <option>⬜ Not Started</option>
-                  <option>🟡 In Progress</option>
-                  <option>🟢 Complete</option>
+              <div class="sr">
+                <select class="ssel" id="feb_st">
+                  <option value="ns">⬜ Not Started</option>
+                  <option value="ip">🟡 In Progress</option>
+                  <option value="done">🟢 Complete</option>
                 </select>
-                <button class="save-btn">Save Entry</button>
+                <button class="sbtn" onclick="saveCard('feb',['feb_comp','feb_aims','feb_inp','feb_st'],this)">💾 Save
+                  Entry</button>
               </div>
             </div>
 
             <!-- MARCH -->
-            <div class="activity-card">
-              <div class="activity-month">🏗️ March — Infrastructure Setup & Stocking</div>
-              <div class="activity-title">Housing Construction & Animal Welfare</div>
-              <div class="field-group">
-                <label>Housing Design Description</label>
-                <textarea placeholder="Describe the climate-smart housing design, materials used…"></textarea>
+            <div class="ac">
+              <div class="amon">🏗️ March — Infrastructure Setup &amp; Stocking</div>
+              <div class="attl">Housing Construction &amp; Animal Welfare</div>
+              <div class="fgrp"><label>Housing Design, Dimensions &amp; Materials Used</label><textarea id="mar_hse"
+                  placeholder="Describe climate-smart housing: type, dimensions (L×W×H), locally available materials used, ventilation, drainage, shading features…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Biosecurity Measures Implemented</label>
-                <textarea placeholder="List biosecurity and animal welfare measures…"></textarea>
+              <div class="fgrp"><label>Biosecurity Measures &amp; Stocking Details</label><textarea id="mar_stk"
+                  placeholder="Breed, number stocked (2 chickens), age at stocking, weight, source/supplier, cost (KES), biosecurity measures, animal welfare steps taken…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Stocking Details (number, breed, source)</label>
-                <textarea placeholder="e.g. 2 Kienyeji chickens sourced from…"></textarea>
-              </div>
-              <div class="upload-zone">
-                <input type="file" accept="image/*" multiple>
-                <div class="upload-icon">📸</div>
-                <div class="upload-label"><strong>Construction & Stocking Photos</strong>Upload photos of housing and
+              <div class="uz"><input type="file" accept="image/*" multiple>
+                <div class="ui">📸</div>
+                <div class="ul-txt"><strong>Construction &amp; Stocking Photos</strong>Upload photos of the housing and
                   stocked enterprise</div>
               </div>
-              <div class="upload-zone">
-                <input type="file" accept="video/*">
-                <div class="upload-icon">🎥</div>
-                <div class="upload-label"><strong>Stocking Video</strong>Upload video evidence</div>
+              <div class="uz"><input type="file" accept="video/*">
+                <div class="ui">🎥</div>
+                <div class="ul-txt"><strong>Stocking Video</strong>Upload video evidence of stocking</div>
               </div>
-              <div class="status-row">
-                <select class="status-select">
-                  <option>⬜ Not Started</option>
-                  <option>🟡 In Progress</option>
-                  <option>🟢 Complete</option>
+              <div class="sr">
+                <select class="ssel" id="mar_st">
+                  <option value="ns">⬜ Not Started</option>
+                  <option value="ip">🟡 In Progress</option>
+                  <option value="done">🟢 Complete</option>
                 </select>
-                <button class="save-btn">Save Entry</button>
+                <button class="sbtn" onclick="saveCard('mar',['mar_hse','mar_stk','mar_st'],this)">💾 Save
+                  Entry</button>
               </div>
             </div>
+
           </div>
         </div>
-      </div>
+      </div><!-- end M1 -->
 
       <!-- MILESTONE II -->
-      <div class="milestone-panel" id="milestone2">
-        <div class="milestone-header m2" onclick="toggleMilestone('m2body', this)">
-          <div class="milestone-badge">
-            <div class="badge-icon">🐔</div>
-            <div class="milestone-meta">
-              <h3>Milestone II — Rearing, Value Addition & Sales</h3>
+      <div class="ms-panel" id="m2panel">
+        <div class="ms-hdr m2" onclick="togMS('m2b','m2a')">
+          <div class="ms-badge">
+            <div class="bi">🐔</div>
+            <div class="ms-meta">
+              <h3>Milestone II — Rearing, Value Addition &amp; Sales</h3>
               <p>April · May · June · July 2026</p>
             </div>
           </div>
-          <div style="display:flex; align-items:center; gap:12px;">
-            <div class="deadline-chip">Upload by 31st July 2026</div>
-            <span class="toggle-arrow open" id="m2arrow">▾</span>
+          <div style="display:flex;align-items:center;gap:11px;">
+            <div class="dchip">Upload by 31st July 2026</div><span class="arr open" id="m2a">▾</span>
           </div>
         </div>
-
-        <div class="milestone-body" id="m2body">
-          <div class="activities-grid">
+        <div class="ms-body" id="m2b">
+          <div class="ag">
 
             <!-- APRIL-MAY -->
-            <div class="activity-card">
-              <div class="activity-month">🌿 April–May — Rearing & Routine Management</div>
-              <div class="activity-title">Daily Care, Health & Record Keeping</div>
-              <div class="field-group">
-                <label>Feeding Schedule & Feed Type Used</label>
-                <textarea placeholder="Describe the feeding regime, quantities, frequency…"></textarea>
+            <div class="ac">
+              <div class="amon">🌿 April–May — Rearing &amp; Routine Management</div>
+              <div class="attl">Daily Care, Health &amp; Record Keeping</div>
+              <div class="fgrp"><label>Feeding Schedule, Feed Type &amp; Quantity Per Bird</label><textarea id="apr_fd"
+                  placeholder="Feed type used (starter/grower/finisher), daily quantity per bird, feeding frequency, water quality monitoring method…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Health Interventions (vaccination, deworming)</label>
-                <textarea placeholder="Record dates, products used, dosages…"></textarea>
+              <div class="fgrp"><label>Health Interventions — Vaccination &amp; Deworming Log</label><textarea
+                  id="apr_hth"
+                  placeholder="Vaccination dates and products, deworming dates and products, dosages used, who administered. Any disease outbreaks noted…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Production / Growth Data Summary</label>
-                <textarea placeholder="Record weight gain, egg production, mortality rates…"></textarea>
+              <div class="fgrp"><label>Production / Growth Data Summary</label><textarea id="apr_grw"
+                  placeholder="Weekly weight gain, feed conversion rate, egg production figures (if layers), mortality count, biosecurity measures maintained…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Value Addition Trials (preliminary write-up)</label>
-                <textarea placeholder="Describe proposed value addition process and small-scale trials…"></textarea>
+              <div class="fgrp"><label>Value Addition Trials — Preliminary Write-up</label><textarea id="apr_val"
+                  placeholder="Describe the proposed value addition process. Results of small-scale trials conducted. Any adjustments made…"></textarea>
               </div>
-              <div class="upload-zone">
-                <input type="file" accept="video/*" multiple>
-                <div class="upload-icon">🎥</div>
-                <div class="upload-label"><strong>Routine Management Videos</strong>Upload daily care footage</div>
+              <div class="uz"><input type="file" accept="video/*" multiple>
+                <div class="ui">🎥</div>
+                <div class="ul-txt"><strong>Routine Management Videos</strong>Upload daily care and health check footage
+                </div>
               </div>
-              <div class="upload-zone">
-                <input type="file" accept=".pdf,.docx,image/*">
-                <div class="upload-icon">📄</div>
-                <div class="upload-label"><strong>Records & Write-up</strong>Upload typed/scanned records</div>
+              <div class="uz"><input type="file" accept=".pdf,.docx,image/*">
+                <div class="ui">📄</div>
+                <div class="ul-txt"><strong>Records &amp; Write-up Documents</strong>Upload typed or scanned records
+                </div>
               </div>
-              <div class="status-row">
-                <select class="status-select">
-                  <option>⬜ Not Started</option>
-                  <option>🟡 In Progress</option>
-                  <option>🟢 Complete</option>
+              <div class="sr">
+                <select class="ssel" id="apr_st">
+                  <option value="ns">⬜ Not Started</option>
+                  <option value="ip">🟡 In Progress</option>
+                  <option value="done">🟢 Complete</option>
                 </select>
-                <button class="save-btn">Save Entry</button>
+                <button class="sbtn" onclick="saveCard('apr',['apr_fd','apr_hth','apr_grw','apr_val','apr_st'],this)">💾
+                  Save Entry</button>
               </div>
             </div>
 
             <!-- JUNE -->
-            <div class="activity-card">
-              <div class="activity-month">💰 June — Value Addition & Marketing Strategy</div>
-              <div class="activity-title">Processing, Branding & Revenue Projections</div>
-              <div class="field-group">
-                <label>Value Addition Process Description</label>
-                <textarea placeholder="e.g. dressed chicken, egg grading/packaging, sausages…"></textarea>
+            <div class="ac">
+              <div class="amon">💰 June — Value Addition &amp; Marketing Strategy</div>
+              <div class="attl">Processing, Branding &amp; Revenue Projections</div>
+              <div class="fgrp"><label>Products Produced &amp; Value Addition Process</label><textarea id="jun_prd"
+                  placeholder="Products: e.g. dressed chicken, egg grading/packaging, sausages, fried chicken. Step-by-step process used to add value…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Packaging & Quality Standards</label>
-                <textarea placeholder="Describe packaging design and quality control measures…"></textarea>
+              <div class="fgrp"><label>Quality Standards, Packaging &amp; Pricing Strategy</label><textarea id="jun_pkg"
+                  placeholder="Quality control measures, packaging design description, cost of production per unit, selling price, profit margin…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Pricing Strategy</label>
-                <textarea placeholder="Cost of production, selling price, expected profit margin…"></textarea>
+              <div class="fgrp"><label>Target Customers, Promotion Methods &amp; Distribution</label><textarea
+                  id="jun_mkt"
+                  placeholder="Target customers. Promotion: social media, flyers, word-of-mouth. Distribution: farm gate, local market, delivery, school canteen…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Distribution Channels</label>
-                <textarea placeholder="e.g. farm gate, local market, delivery, partnerships with schools…"></textarea>
+              <div class="fgrp"><label>Revenue Projections (KES)</label><textarea id="jun_rev"
+                  placeholder="Production cost per unit (KES), selling price per unit (KES), estimated quantity to sell, total projected revenue, expected net profit…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Promotion Methods</label>
-                <textarea placeholder="e.g. social media, flyers, word-of-mouth…"></textarea>
+              <div class="uz"><input type="file" accept="image/*,video/*" multiple>
+                <div class="ui">📸</div>
+                <div class="ul-txt"><strong>Value Addition Photos &amp; Videos</strong>Upload evidence of processing,
+                  packaging, and products</div>
               </div>
-              <div class="field-group">
-                <label>Revenue Projections (KES)</label>
-                <textarea placeholder="Estimated production costs, selling price, expected revenue…"></textarea>
-              </div>
-              <div class="upload-zone">
-                <input type="file" accept="image/*,video/*" multiple>
-                <div class="upload-icon">📸</div>
-                <div class="upload-label"><strong>Value Addition Photos & Videos</strong>Upload evidence of processing
-                </div>
-              </div>
-              <div class="status-row">
-                <select class="status-select">
-                  <option>⬜ Not Started</option>
-                  <option>🟡 In Progress</option>
-                  <option>🟢 Complete</option>
+              <div class="sr">
+                <select class="ssel" id="jun_st">
+                  <option value="ns">⬜ Not Started</option>
+                  <option value="ip">🟡 In Progress</option>
+                  <option value="done">🟢 Complete</option>
                 </select>
-                <button class="save-btn">Save Entry</button>
+                <button class="sbtn"
+                  onclick="saveCard('jun',['jun_prd','jun_pkg','jun_mkt','jun_rev','jun_st'],this)">💾 Save
+                  Entry</button>
               </div>
             </div>
 
             <!-- JULY -->
-            <div class="activity-card">
-              <div class="activity-month">📊 July — Marketing, Sales & Final Reporting</div>
-              <div class="activity-title">Sales Results, Reflection & Stakeholder Presentation</div>
-              <div class="field-group">
-                <label>Sales Data (quantity sold, revenue, customer feedback)</label>
-                <textarea placeholder="Record all sales — date, product, quantity, price, buyer…"></textarea>
+            <div class="ac">
+              <div class="amon">📊 July — Marketing, Sales &amp; Final Reporting</div>
+              <div class="attl">Sales Results, Reflection &amp; Stakeholder Presentation</div>
+              <div class="fgrp"><label>Sales Data — Quantity, Revenue &amp; Customer Feedback</label><textarea
+                  id="jul_sal"
+                  placeholder="Date, product sold, quantity, unit price (KES), total revenue, buyer type (household/restaurant/school), customer feedback received…"></textarea>
               </div>
-              <div class="field-group">
-                <label>Profit & Sustainability Analysis</label>
-                <textarea placeholder="Actual profit vs projected. Sustainability outlook…"></textarea>
+              <div class="fgrp"><label>Profit &amp; Sustainability Analysis</label><textarea id="jul_prf"
+                  placeholder="Actual revenue vs projected. Total production cost. Net profit or loss (KES). Is the enterprise sustainable? Why or why not?"></textarea>
               </div>
-              <div class="field-group">
-                <label>Lessons Learned & Future Improvements</label>
-                <textarea placeholder="What went well? What would you do differently?"></textarea>
+              <div class="fgrp"><label>Lessons Learned &amp; Future Improvements</label><textarea id="jul_les"
+                  placeholder="Key successes of the project. Key challenges encountered. What you would do differently in future projects…"></textarea>
               </div>
-              <div class="upload-zone">
-                <input type="file" accept="video/*">
-                <div class="upload-icon">🎥</div>
-                <div class="upload-label"><strong>Individual Reflection Video (3–5 mins)</strong>Each member uploads
-                  their own reflection clip</div>
+              <div class="uz"><input type="file" accept="video/*">
+                <div class="ui">🎥</div>
+                <div class="ul-txt"><strong>Individual Reflection Video (3–5 mins each)</strong>Each Student uploads
+                  their own individual reflection clip</div>
               </div>
-              <div class="upload-zone">
-                <input type="file" accept="image/*" multiple>
-                <div class="upload-icon">📸</div>
-                <div class="upload-label"><strong>Final Photo (Principal + Teacher + Candidates)</strong>.gif or .jpeg
-                  format, full school uniform</div>
+              <div class="uz"><input type="file" accept="image/*" multiple>
+                <div class="ui">📸</div>
+                <div class="ul-txt"><strong>Final Class Photo — Principal + Teacher + Candidates</strong>.gif or .jpeg
+                  format · Full school uniform required by KNEC</div>
               </div>
-              <div class="upload-zone">
-                <input type="file" accept="video/*,image/*" multiple>
-                <div class="upload-icon">📸</div>
-                <div class="upload-label"><strong>Marketing & Sales Evidence</strong>Photos and videos of sales
+              <div class="uz"><input type="file" accept="video/*,image/*" multiple>
+                <div class="ui">📸</div>
+                <div class="ul-txt"><strong>Marketing &amp; Sales Evidence</strong>Photos and videos of all sales
                   activities</div>
               </div>
-              <div class="status-row">
-                <select class="status-select">
-                  <option>⬜ Not Started</option>
-                  <option>🟡 In Progress</option>
-                  <option>🟢 Complete</option>
+              <div class="sr">
+                <select class="ssel" id="jul_st">
+                  <option value="ns">⬜ Not Started</option>
+                  <option value="ip">🟡 In Progress</option>
+                  <option value="done">🟢 Complete</option>
                 </select>
-                <button class="save-btn">Save Entry</button>
+                <button class="sbtn" onclick="saveCard('jul',['jul_sal','jul_prf','jul_les','jul_st'],this)">💾 Save
+                  Entry</button>
               </div>
             </div>
+
           </div>
         </div>
-      </div>
-    </div>
+      </div><!-- end M2 -->
 
-    <!-- SUBMISSION PANEL -->
-    <div class="submission-panel" id="submission" style="margin-top: 32px;">
-      <div class="section-label" style="color: var(--gold);">KNEC Portal Submission</div>
+    </div><!-- end ms-grid -->
+
+    <!-- ══════════════ SUBMISSION ══════════════ -->
+    <div class="sub-panel" id="sub">
+      <div class="sec-lbl" style="color:var(--gold);">KNEC Portal Submission</div>
       <h3>Electronic Submission Checklist</h3>
-      <p>Scores and pictorial evidence must be submitted twice via the KNEC Portal. Once uploaded, scores cannot be
+      <p>Scores and pictorial evidence must be submitted twice via the KNEC Portal. Once uploaded scores cannot be
         altered.</p>
-      <div class="deadline-cards">
-        <div class="deadline-card">
-          <div class="d-tag">Milestone I</div>
-          <div class="d-date">31st March 2026</div>
-          <div class="d-desc">Portal open: 1st–31st March</div>
+      <div class="dcards">
+        <div class="dc">
+          <div class="dt">Milestone I</div>
+          <div class="dd">31st April 2026</div>
+          <div class="ds">Portal open: 1st – 31st April 2026</div>
         </div>
-        <div class="deadline-card">
-          <div class="d-tag">Milestone II</div>
-          <div class="d-date">31st July 2026</div>
-          <div class="d-desc">Portal open: 1st–31st July</div>
+        <div class="dc">
+          <div class="dt">Milestone II</div>
+          <div class="dd">31st July 2026</div>
+          <div class="ds">Portal open: 1st – 31st July 2026</div>
         </div>
       </div>
       <div
-        style="background: rgba(255,255,255,0.07); border-radius: 12px; padding: 16px; margin-bottom: 20px; font-size: 13px; opacity: 0.85; line-height: 1.8;">
-        ✅ Project assessment sheets kept under lock in Principal's office<br>
-        ✅ Scores entered in assessment sheets after every assessment<br>
-        ✅ Index numbers in ascending order matching final examination<br>
-        ✅ Final photo in .gif or .jpeg — Principal + Teacher + Candidates in uniform<br>
-        ✅ Assessment Sheets + Manual Mark Sheets handed to Sub-County Director by first week of August 2026<br>
-        ✅ Centre Report Form completed by Agriculture Teacher
+        style="background:rgba(255,255,255,.07);border-radius:11px;padding:14px;margin-bottom:18px;font-size:12px;opacity:.85;line-height:2.1;">
+        ✅ Project assessment sheets kept under lock and key in Principal's office<br>
+        ✅ Scores entered in assessment sheets immediately after each assessment<br>
+        ✅ Index numbers in ascending order matching the final examination<br>
+        ✅ Final photo in .gif or .jpeg — Principal + Agriculture Teacher + Candidates in full uniform<br>
+        ✅ All documents handed to Sub-County Director of Education — first week of August 2026<br>
+        ✅ Centre Report Form completed and signed by the Agriculture Teacher
       </div>
-      <button class="submit-btn">📤 Proceed to KNEC Portal Upload</button>
+      <button class="subbtn">📤 Proceed to KNEC Portal Upload</button>
     </div>
-    <div class="d-desc">Powered by Smacqx Technologies Call +25478309458 Teacher Kibet Solosma</div>
-  </div><!-- end main-wrap -->
+    <div class="ds">Powered by Smacqx Technologies By Teacher Kibet Solosma Tel No +254783809458</div>
+  </div><!-- end main -->
 
+  <!-- ══════════════════════════════════════════
+     JAVASCRIPT — ALL LOGIC
+══════════════════════════════════════════ -->
   <script>
-    function toggleMilestone(bodyId, headerEl) {
-      const body = document.getElementById(bodyId);
-      const arrowId = bodyId.replace('body', 'arrow');
-      const arrow = document.getElementById(arrowId);
-      if (body.classList.contains('collapsed')) {
-        body.classList.remove('collapsed');
-        arrow.classList.add('open');
-      } else {
-        body.classList.add('collapsed');
-        arrow.classList.remove('open');
+    /* ── Storage ── */
+    const KEY = 'kcse_agri_2026';
+    function ld() { try { return JSON.parse(localStorage.getItem(KEY) || '{}') } catch (e) { return {} } }
+    function sv(d) { try { localStorage.setItem(KEY, JSON.stringify(d)) } catch (e) { } }
+
+    /* ── Save card ── */
+    function saveCard(sec, ids, btn) {
+      const d = ld();
+      ids.forEach(id => { const el = document.getElementById(id); if (el) d[id] = el.value; });
+      sv(d);
+      btn.classList.add('saved');
+      btn.innerHTML = '✅ Saved!';
+      setTimeout(() => { btn.classList.remove('saved'); btn.innerHTML = '💾 Save Entry'; }, 2200);
+      showToast('✅ ' + sec.toUpperCase() + ' entry saved!');
+    }
+
+    /* ── Restore all on load ── */
+    function restoreAll() {
+      const d = ld();
+      // textareas and selects with ids
+      document.querySelectorAll('[id]').forEach(el => {
+        if ((el.tagName === 'TEXTAREA' || el.tagName === 'SELECT' || el.tagName === 'INPUT') && d[el.id] !== undefined)
+          el.value = d[el.id];
+      });
+      // hero inputs
+      ['f_school', 'f_group', 'f_ent', 'f_teacher'].forEach(id => {
+        const el = document.getElementById(id); if (el && d[id]) el.value = d[id];
+      });
+      // Students
+      if (d.Students) {
+        d.Students.forEach((m, i) => {
+          const n = document.querySelector('.mn[data-i="' + i + '"]');
+          const ix = document.querySelector('.mi[data-i="' + i + '"]');
+          const r = document.querySelector('.mr[data-i="' + i + '"]');
+          if (n && m.n) n.value = m.n;
+          if (ix && m.i) ix.value = m.i;
+          if (r && m.r) r.value = m.r;
+        });
       }
     }
 
-    // Mark step dots interactive
-    document.querySelectorAll('.milestone-step').forEach((step, i) => {
-      step.addEventListener('click', () => {
-        document.querySelectorAll('.step-dot').forEach((d, j) => {
-          if (j < i) d.className = 'step-dot done';
-          else if (j === i) d.className = 'step-dot active';
-          else d.className = 'step-dot pending';
+    /* ── Wire auto-save for hero + Students ── */
+    function wireAuto() {
+      ['f_school', 'f_group', 'f_ent', 'f_teacher'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('input', () => { const d = ld(); d[id] = el.value; sv(d); });
+      });
+      document.querySelectorAll('.mn,.mi,.mr').forEach(inp => {
+        inp.addEventListener('input', () => {
+          const d = ld();
+          if (!d.Students) d.Students = Array(5).fill(null).map(() => ({ n: '', i: '', r: '' }));
+          const idx = parseInt(inp.dataset.i);
+          if (inp.classList.contains('mn')) d.Students[idx].n = inp.value;
+          if (inp.classList.contains('mi')) d.Students[idx].i = inp.value;
+          if (inp.classList.contains('mr')) d.Students[idx].r = inp.value;
+          sv(d);
         });
       });
-    });
+    }
 
-    // Upload zone file name display
-    document.querySelectorAll('.upload-zone input[type="file"]').forEach(input => {
-      input.addEventListener('change', function () {
-        const label = this.closest('.upload-zone').querySelector('.upload-label');
+    /* ── Toast ── */
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg; t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3000);
+    }
+
+    /* ── UI ── */
+    function togMS(bid, aid) {
+      const c = document.getElementById(bid).classList.toggle('col');
+      document.getElementById(aid).classList.toggle('open', !c);
+    }
+    function setDot(n) {
+      for (let i = 0; i < 6; i++) {
+        const d = document.getElementById('d' + i);
+        if (i < n) { d.className = 'dot done'; d.textContent = '✓'; }
+        else if (i === n) { d.className = 'dot active'; d.textContent = (i + 1); }
+        else { d.className = 'dot'; d.textContent = (i + 1); }
+      }
+    }
+    document.querySelectorAll('.uz input[type=file]').forEach(inp => {
+      inp.addEventListener('change', function () {
         if (this.files.length > 0) {
-          label.innerHTML = `<strong style="color:#2d6a2d">✓ ${this.files.length} file(s) selected</strong>${Array.from(this.files).map(f => f.name).join(', ')}`;
+          const l = this.closest('.uz').querySelector('.ul-txt');
+          l.innerHTML = '<strong style="color:#2d6a2d">✓ ' + this.files.length + ' file(s) attached</strong>' + [...this.files].map(f => f.name).join(', ');
         }
       });
     });
-
-    // Nav scroll
-    document.querySelectorAll('a.nav-pill').forEach(link => {
-      link.addEventListener('click', function (e) {
-        document.querySelectorAll('a.nav-pill').forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
+    document.querySelectorAll('a.npill').forEach(a => {
+      a.addEventListener('click', () => {
+        document.querySelectorAll('a.npill').forEach(x => x.classList.remove('act'));
+        a.classList.add('act');
       });
+    });
+
+    /* ══ PRINT OPTION SELECT ══ */
+    let curOpt = 'm1';
+    function selOpt(o) {
+      curOpt = o;
+      ['m1', 'm2', 'both', 'poster'].forEach(x =>
+        document.getElementById('opt-' + x).classList.toggle('sel', x === o)
+      );
+    }
+
+    /* ══ READ VALUES ══ */
+    function gv(id) {
+      const el = document.getElementById(id);
+      if (el && el.value.trim()) return el.value.trim();
+      return (ld()[id] || '').trim();
+    }
+    function gmv(cls, i) {
+      const el = document.querySelector('.' + cls + '[data-i="' + i + '"]');
+      return el ? el.value.trim() : '';
+    }
+
+    /* ══ PRINT CSS ══ */
+    function pCSS() {
+      return `*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Arial,Helvetica,sans-serif;font-size:10.5px;color:#111;background:#fff;}
+.pg{padding:11mm 13mm 8mm;min-height:276mm;page-break-after:always;}
+.pg:last-child{page-break-after:avoid;}
+@page{size:A4;margin:0;}
+.ph{background:#1a3a1a;color:#fff;padding:11px 17px;display:flex;align-items:center;justify-content:space-between;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.ph-t{font-size:13px;font-weight:700;}.ph-s{font-size:8px;opacity:.65;margin-top:1px;}
+.ph-b{background:#c8a84b;color:#1a3a1a;padding:4px 12px;border-radius:4px;font-size:9.5px;font-weight:800;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.ib{background:#e8f5e9;border-bottom:1px solid #c8e6c9;padding:6px 17px;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:9px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.il{font-size:7px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:#2d6a2d;}
+.iv{font-size:10px;font-weight:600;border-bottom:1px solid #999;min-height:15px;padding-bottom:1px;}
+.ps{background:#1a3a1a;color:#f5e6b8;padding:5px 13px;font-size:11px;font-weight:700;border-left:5px solid #c8a84b;margin:11px 0 7px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.pm{font-size:8.5px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px;color:#2d6a2d;margin:9px 0 3px;padding-bottom:2px;border-bottom:1px solid #c8e6c9;}
+.pf{margin-bottom:7px;}.pl{font-size:7.5px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;color:#444;margin-bottom:1px;}
+.pln{border-bottom:1px solid #bbb;min-height:19px;margin-bottom:4px;display:block;}
+.pv{background:#f9fbe7;border:1px solid #c8e6c9;border-radius:3px;padding:5px 7px;font-size:9.5px;color:#1a3a1a;line-height:1.45;min-height:22px;margin-bottom:4px;white-space:pre-wrap;word-break:break-word;}
+.p2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.pt{width:100%;border-collapse:collapse;font-size:8.5px;margin-bottom:9px;}
+.pt th{background:#1a3a1a;color:#fff;padding:4px 6px;text-align:left;font-size:7.5px;text-transform:uppercase;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.pt td{padding:5px 6px;border-bottom:1px solid #ddd;height:19px;}
+.pt tr:nth-child(even) td{background:#f7f7f7;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.pmt{width:100%;border-collapse:collapse;font-size:10.5px;}
+.pmt th{background:#e8f5e9;color:#1a3a1a;padding:6px 9px;font-size:8.5px;font-weight:700;text-align:left;border:1px solid #c8e6c9;text-transform:uppercase;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.pmt td{padding:10px 9px;border:1px solid #ddd;}
+.sig{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:12px;padding-top:9px;border-top:2px solid #c8a84b;}
+.sb .sl{font-size:7.5px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;color:#555;display:block;margin-bottom:22px;}
+.sb .ss{border-top:1px solid #444;font-size:7.5px;color:#888;padding-top:2px;text-align:center;}
+.pft{margin-top:9px;padding-top:5px;border-top:1px solid #c8a84b;display:flex;justify-content:space-between;font-size:7.5px;color:#888;}
+.pbox{border:4px solid #1a3a1a;border-radius:9px;overflow:hidden;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.phdr{background:#1a3a1a;color:#fff;padding:18px 22px;text-align:center;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.pinf{background:#e8f5e9;padding:13px 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:9px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.pmb{padding:16px 22px;}
+.pftr{background:#1a3a1a;padding:9px 22px;display:grid;grid-template-columns:1fr 1fr;gap:5px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.pci{font-size:9.5px;color:#c8e6c9;}.pci::before{content:"☐ ";color:#c8a84b;}`;
+    }
+
+    /* ══ BUILD BLOCKS ══ */
+    function bH(sub, badge) {
+      return `<div class="ph"><div><div class="ph-t">KCSE Agriculture Project 2026 — Paper 443/3</div><div class="ph-s">${sub}</div></div><div class="ph-b">${badge}</div></div>`;
+    }
+    function bIB(lbl, val) {
+      return `<div class="ib">
+  <div><div class="il">School</div><div class="iv">${esc(gv('f_school')) || '&nbsp;'}</div></div>
+  <div><div class="il">Group</div><div class="iv">${esc(gv('f_group')) || '&nbsp;'}</div></div>
+  <div><div class="il">Enterprise</div><div class="iv">${esc(gv('f_ent')) || '&nbsp;'}</div></div>
+  <div><div class="il">${lbl}</div><div class="iv">${val}</div></div>
+  </div>`;
+    }
+    const bS = t => `<div class="ps">${t}</div>`;
+    const bM = t => `<div class="pm">${t}</div>`;
+    function esc(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+    function bF(label, lines, id) {
+      const v = id ? gv(id) : '';
+      if (v) return `<div class="pf"><div class="pl">${label}</div><div class="pv">${esc(v).replace(/\n/g, '<br>')}</div></div>`;
+      return `<div class="pf"><div class="pl">${label}</div>${Array(lines || 2).fill('<div class="pln">&nbsp;</div>').join('')}</div>`;
+    }
+    function bT(heads, rows) {
+      return `<table class="pt"><thead><tr>${heads.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${Array(rows || 6).fill(0).map(() => `<tr>${heads.map(() => '<td>&nbsp;</td>').join('')}</tr>`).join('')}</tbody></table>`;
+    }
+    function bSIG() {
+      return `<div class="sig">
+  <div class="sb"><span class="sl">Agriculture Teacher Signature</span><div class="ss">Name &amp; Date</div></div>
+  <div class="sb"><span class="sl">Group Leader Signature</span><div class="ss">Name &amp; Date</div></div>
+  <div class="sb"><span class="sl">Principal Stamp &amp; Signature</span><div class="ss">Official Stamp</div></div>
+  </div>`;
+    }
+    function bFT() {
+      return `<div class="pft"><span>© 2026 The Kenya National Examinations Council · Agriculture 443/3</span><span>Printed: ${new Date().toLocaleDateString('en-KE', { day: '2-digit', month: 'long', year: 'numeric' })}</span></div>`;
+    }
+
+    /* ── BUILD MILESTONE I ── */
+    function buildM1() {
+      return `<div class="pg">
+  ${bH('MILESTONE I — Planning, Design &amp; Infrastructure Setup', 'MILESTONE I')}
+  ${bIB('Deadline', '31st April 2026')}
+  ${bS('JANUARY — Locality Analysis &amp; Problem Identification')}
+  <div class="p2">${bF('Available Resources (land, water, feed)', 2, 'jan_res')}${bF('Climate Assessment (rainfall, temperature, hazards)', 2)}</div>
+  ${bF('Challenges Hindering Livestock Production (list all identified)', 3, 'jan_ch')}
+  <div class="p2">${bF('Popular Livestock Products &amp; Target Customers', 2, 'jan_mkt')}${bF('Demand Forecast Summary', 2, 'jan_dem')}</div>
+  ${bF('Individual Presentation Summary &amp; Video Reference', 1)}
+  ${bS('FEBRUARY — Solution Design &amp; Project Proposal')}
+  ${bT(['Enterprise Considered', 'Profitability', 'Resources Needed', 'Market Demand', 'Selected?'], 4)}
+  ${bF('Selected Enterprise &amp; Full Justification', 3, 'feb_comp')}
+  <div class="p2">${bF('Project Aims &amp; Key Phases / Duration', 2, 'feb_aims')}${bF('Inputs Required &amp; Long-term Viability Plan', 2, 'feb_inp')}</div>
+  ${bT(['Input Category', 'Item Required', 'Estimated Cost (KES)', 'Source / Supplier'], 5)}
+  ${bF('Class Presentation Summary (date, key points)', 1)}
+  ${bS('MARCH — Infrastructure Setup &amp; Stocking')}
+  <div class="p2">${bF('Housing Type, Dimensions &amp; Materials Used', 2, 'mar_hse')}${bF('Climate-Smart Features &amp; Biosecurity Measures', 2)}</div>
+  ${bT(['Livestock', 'Breed', 'No. Stocked', 'Age at Stocking', 'Weight', 'Source / Supplier', 'Cost (KES)'], 3)}
+  ${bF('Stocking Details, Animal Welfare &amp; Evidence Reference', 2, 'mar_stk')}
+  ${bSIG()}${bFT()}
+  </div>`;
+    }
+
+    /* ── BUILD MILESTONE II ── */
+    function buildM2() {
+      return `<div class="pg">
+  ${bH('MILESTONE II — Rearing, Value Addition &amp; Marketing', 'MILESTONE II')}
+  ${bIB('Deadline', '31st July 2026')}
+  ${bS('APRIL–MAY — Rearing &amp; Routine Management')}
+  <div class="p2">${bF('Feed Type, Daily Quantity Per Bird &amp; Frequency', 1, 'apr_fd')}${bF('Water Quality Monitoring', 1)}</div>
+  ${bM('DAILY HEALTH CHECK LOG (attach full daily log separately)')}
+  ${bT(['Date', 'Age (wks)', 'Weight (g)', 'Behaviour Observed', 'Feed Intake', 'Remarks'], 6)}
+  ${bM('HEALTH INTERVENTIONS LOG')}
+  ${bT(['Date', 'Intervention Type', 'Product Used', 'Dosage', 'Done By'], 5)}
+  <div class="p2">${bF('Vaccination &amp; Deworming Schedule', 2, 'apr_hth')}${bF('Production / Growth Data Summary', 2, 'apr_grw')}</div>
+  ${bF('Value Addition Trials — Preliminary Write-up Summary', 3, 'apr_val')}
+  ${bS('JUNE — Value Addition &amp; Marketing Strategy')}
+  ${bF('Products Produced &amp; Step-by-Step Value Addition Process', 4, 'jun_prd')}
+  <div class="p2">${bF('Quality Standards &amp; Packaging Design', 2, 'jun_pkg')}${bF('Target Customers, Promotion &amp; Distribution', 2, 'jun_mkt')}</div>
+  ${bT(['Item / Product', 'Production Cost (KES)', 'Selling Price (KES)', 'Est. Quantity', 'Expected Revenue (KES)'], 4)}
+  ${bF('Total Projected Revenue &amp; Net Profit Estimate (KES)', 1, 'jun_rev')}
+  ${bSIG()}${bFT()}
+  </div>
+  <div class="pg">
+  ${bH('MILESTONE II — Sales, Financial Analysis &amp; Final Reporting (July)', 'MILESTONE II')}
+  ${bIB('Deadline', '31st July 2026')}
+  ${bS('JULY — Sales Records &amp; Financial Performance')}
+  ${bM('SALES RECORD')}
+  ${bT(['Date', 'Product Sold', 'Qty Sold', 'Unit Price (KES)', 'Revenue (KES)', 'Buyer Type', 'Customer Feedback'], 8)}
+  ${bM('FINANCIAL PERFORMANCE ANALYSIS')}
+  ${bT(['Category', 'Projected (KES)', 'Actual (KES)', 'Variance (KES)'], 5)}
+  <div class="p2">${bF('Total Revenue Earned (KES)', 1, 'jul_sal')}${bF('Total Production Cost (KES)', 1)}</div>
+  <div class="p2">${bF('Net Profit / Loss (KES)', 1, 'jul_prf')}${bF('Was enterprise profitable? Explain', 2)}</div>
+  ${bF('Sustainability Analysis', 3)}
+  ${bS('LESSONS LEARNED &amp; INDIVIDUAL REFLECTIONS')}
+  ${bF('Key Successes', 2, 'jul_les')}
+  ${bF('Key Challenges Encountered', 2)}
+  ${bF('What Would You Do Differently in Future?', 2)}
+  ${bM('INDIVIDUAL REFLECTION VIDEO SUMMARY (3–5 mins per Student)')}
+  ${bT(['Student Name', 'Index No.', 'Key Reflection Points (summary)', 'Video Saved ✓'], 5)}
+  ${bF('Stakeholder Presentation — Date, Audience &amp; Key Findings Presented', 2)}
+  ${bSIG()}${bFT()}
+  </div>`;
+    }
+
+    /* ── BUILD POSTER ── */
+    function buildPoster() {
+      const d = ld();
+      const ms = d.Students || [];
+      const rows = [0, 1, 2, 3, 4].map(i => {
+        const n = gmv('mn', i) || (ms[i] && ms[i].n) || '';
+        const ix = gmv('mi', i) || (ms[i] && ms[i].i) || '';
+        const r = gmv('mr', i) || (ms[i] && ms[i].r) || '';
+        return `<tr><td style="text-align:center;font-weight:700">${i + 1}</td><td>${esc(n)}</td><td>${esc(ix)}</td><td>${esc(r)}</td></tr>`;
+      }).join('');
+      return `<div class="pg">
+  <div class="pbox">
+    <div class="phdr">
+      <div style="font-size:8px;letter-spacing:2px;color:#c8a84b;text-transform:uppercase;margin-bottom:4px;">Kenya National Examinations Council · KCSE 2026</div>
+      <div style="font-size:20px;font-weight:900;">AGRICULTURE PROJECT — PAPER 443/3</div>
+      <div style="font-size:10px;opacity:.65;margin-top:3px;">Group Identification Poster · Section 2.3</div>
+    </div>
+    <div class="pinf">
+      <div><div style="font-size:7.5px;text-transform:uppercase;letter-spacing:1px;color:#2d6a2d;font-weight:700;">Group Number</div><div style="font-size:20px;font-weight:900;color:#1a3a1a;">${esc(gv('f_group')) || '____'}</div></div>
+      <div><div style="font-size:7.5px;text-transform:uppercase;letter-spacing:1px;color:#2d6a2d;font-weight:700;">School Name</div><div style="font-size:12px;font-weight:700;color:#1a3a1a;">${esc(gv('f_school')) || '___________________'}</div></div>
+      <div><div style="font-size:7.5px;text-transform:uppercase;letter-spacing:1px;color:#2d6a2d;font-weight:700;">Enterprise</div><div style="font-size:12px;font-weight:700;color:#1a3a1a;">${esc(gv('f_ent')) || '___________________'}</div></div>
+      <div><div style="font-size:7.5px;text-transform:uppercase;letter-spacing:1px;color:#2d6a2d;font-weight:700;">Agriculture Teacher</div><div style="font-size:12px;font-weight:700;color:#1a3a1a;">${esc(gv('f_teacher')) || '___________________'}</div></div>
+    </div>
+    <div class="pmb">
+      <table class="pmt">
+        <thead><tr><th style="width:30px">#</th><th>Full Name of Student</th><th>Index Number</th><th>Role / Part Presented</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+    <div style="padding:0 22px 14px;">${bSIG()}</div>
+    <div class="pftr">
+      <div class="pci">All Students present during every assessment</div>
+      <div class="pci">Portfolio accessible to authorised KNEC agents</div>
+      <div class="pci">Assessment sheets under lock in Principal's office</div>
+      <div class="pci">Scores uploaded on KNEC portal by each deadline</div>
+    </div>
+  </div>
+  ${bFT()}
+  </div>`;
+    }
+
+    /* ══ GENERATE & OPEN PRINT TAB ══ */
+    let _html = '';
+
+    function genPrint() {
+      if (curOpt === 'm1') _html = buildM1();
+      else if (curOpt === 'm2') _html = buildM2();
+      else if (curOpt === 'both') _html = buildM1() + buildM2() + buildPoster();
+      else _html = buildPoster();
+      const lbl = { m1: 'Milestone I', m2: 'Milestone II (2 pages)', both: 'Full Portfolio — All Milestones + Poster', poster: 'Group Poster (KNEC §2.3)' };
+      document.getElementById('mTitle').textContent = '✅ Ready: ' + lbl[curOpt];
+      document.getElementById('modal').classList.add('show');
+    }
+
+    /* Opens a Blob URL in a new tab — bypasses ALL popup blockers */
+    document.getElementById('openPrintBtn').addEventListener('click', function () {
+      closeModal();
+      const doc = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>KCSE Agriculture — Print Form</title>
+<style>${pCSS()}</style></head><body>${_html}
+<script>window.addEventListener('load',function(){setTimeout(function(){window.print();},900);});<\/script>
+</body></html>`;
+      const blob = new Blob([doc], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 120000);
+    });
+
+    function closeModal() { document.getElementById('modal').classList.remove('show'); }
+    document.getElementById('modal').addEventListener('click', e => { if (e.target.id === 'modal') closeModal(); });
+
+    /* ══ BOOT ══ */
+    document.addEventListener('DOMContentLoaded', function () {
+      restoreAll();
+      wireAuto();
     });
   </script>
 </body>
